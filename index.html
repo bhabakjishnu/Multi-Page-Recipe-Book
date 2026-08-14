@@ -9,50 +9,48 @@
 
 <body>
     <header>
-        <center>
-            <h1>Welcome to the Ultimate Recipe Book</h1>
-        </center>
+        <h1 style="text-align: center;">Welcome to the Ultimate Recipe Book</h1>
+        <hr>
         <!-- Wrapper div using inline Flexbox to align items side-by-side -->
-            <div style="display: flex; gap: 20px;">
-                <figure style="margin: 0;">
-                    <a href="Mutton.html">
+        <div style="display: flex; gap: 20px;">
+            <figure style="margin: 0;">
+                <a href="Mutton.html">
                     <img src="Mutton.jpg" alt="A delicious recipe book" width="290" height="290">
-                    </a>
-                    <figcaption>A collection of our favorite recipes!</figcaption>
-                </figure>
+                </a>
+                <figcaption><strong>মটন কষা</strong></figcaption>
+            </figure>
 
-                <figure style="margin: 0;">
-                    <a href="Chicken.html">
+            <figure style="margin: 0;">
+                <a href="Chicken.html">
                     <img src="Chicken.jpg" alt="A delicious recipe book" width="290" height="290">
-                    </a>
-                    <figcaption>A collection of our favorite recipes!</figcaption>
-                </figure>
-                <figure style="margin: 0;">
-                    <a href="Friedrice.html">
+                </a>
+                <figcaption><strong>চিকেন কষা</strong></figcaption>
+            </figure>
+            <figure style="margin: 0;">
+                <a href="Friedrice.html">
                     <img src="Friedrice.jpg" alt="A delicious recipe book" width="290" height="290">
-                    </a>
-                    <figcaption>A collection of our favorite recipes!</figcaption>
-                </figure>
-                <figure style="margin: 0;">
-                    <a href="Butternaan.html">
+                </a>
+                <figcaption><strong>ফ্রাইড রাইস</strong></figcaption>
+            </figure>
+            <figure style="margin: 0;">
+                <a href="Butternaan.html">
                     <img src="Butternaan.jpg" alt="A delicious recipe book" width="290" height="290">
-                    </a>
-                    <figcaption>A collection of our favorite recipes!</figcaption>
-                </figure>
-                <figure style="margin: 0;">
-                    <a href="Khichuri.html">
+                </a>
+                <figcaption><strong>বাটার নান</strong></figcaption>
+            </figure>
+            <figure style="margin: 0;">
+                <a href="Khichuri.html">
                     <img src="Khichuri.jpg" alt="A delicious recipe book" width="290" height="290">
-                    </a>
-                    <figcaption>A collection of our favorite recipes!</figcaption>
-                </figure>
-                <figure style="margin: 0;">
-                    <a href="Sabjivat.html">
+                </a>
+                <figcaption><strong>খিচুরি</strong></figcaption>
+            </figure>
+            <figure style="margin: 0;">
+                <a href="Sabjivat.html">
                     <img src="Sabjivat.jpg" alt="A delicious recipe book" width="290" height="290">
-                    </a>
-                    <figcaption>A collection of our favorite recipes!</figcaption>
-                </figure>
-            </div>
-        <p>Select a recipe below to get cooking, or visit our favorite chef for inspiration!</p>
+                </a>
+                <figcaption><strong>সবজি ভাত</strong></figcaption>
+            </figure>
+        </div>
         <hr>
     </header>
     <main>
@@ -60,8 +58,12 @@
             <h2>Our Recipes</h2>
             <ul>
                 <!-- Relative Paths: Linking to files in the same folder -->
-                <li><a href="pancakes.html">Fluffy Pancakes</a></li>
-                <li><a href="spaghetti.html">Classic Spaghetti Bolognese</a></li>
+                <li><a href="Mutton.html">Mutton Curry</a></li>
+                <li><a href="Chicken.html">Chicken Curry</a></li>
+                <li><a href="Friedrice.html">Fried Rice</a></li>
+                <li><a href="Butternaan.html">Butter Naan</a></li>
+                <li><a href="Khichuri.html">Khichuri</a></li>
+                <li><a href="Sabjivat.html">Sabjivat</a></li>
             </ul>
             <h2>Inspiration</h2>
             <ul>
@@ -69,23 +71,53 @@
                 <li><a href="https://www.foodnetwork.com" target="_blank">Visit Food Network (Opens in new tab)</a></li>
             </ul>
         </nav>
-        <section id="Cooking Progress">
+        <section id="Cooking-Progress">
             <h2>Cooking Progress</h2>
-            <table>
+            <table border="1" cellpadding="10" cellspacing="0">
                 <thead>
                     <tr>
+                        <th>Sr. No.</th>
                         <th>Recipe</th>
                         <th>Status</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Fluffy Pancakes</td>
+                        <td>1</td>
+                        <td>Mutton Curry</td>
                         <td>In Progress</td>
+                        <td><progress value="50" max="100">50%</progress></td>
                     </tr>
                     <tr>
-                        <td>Classic Spaghetti Bolognese</td>
+                        <td>2</td>
+                        <td>Chicken Curry</td>
                         <td>Completed</td>
+                        <td><progress value="100" max="100">100%</progress></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fried Rice</td>
+                        <td>Not Started</td>
+                        <td><progress value="0" max="100">0%</progress></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Butter Naan</td>
+                        <td>In Progress</td>
+                        <td><progress value="30" max="100">30%</progress></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Khichuri</td>
+                        <td>Completed</td>
+                        <td><progress value="100" max="100">100%</progress></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Sabjivat</td>
+                        <td>Not Started</td>
+                        <td><progress value="0" max="100">0%</progress></td>
                     </tr>
                 </tbody>
             </table>
@@ -93,8 +125,29 @@
     </main>
     <footer>
         <hr>
-        <p>Created for Class 2: Structural Navigation</p>
-        <p><small>&copy; 2026 My Recipe Book. All rights reserved.</small></p>
+
+        <!-- The HTML5 <address> tag is specifically meant for contact information -->
+        <address>
+            <strong>My Recipe Book Kitchen</strong><br>
+            Sat Simulia, Haringhata, Nadia, WB 741257<br>
+            Phone: <a href="tel:+916294131405">+91 62941 31405</a><br>
+            Email: <a href="mailto:bhabakjishnu2004@gmail.com">bhabakjishnu2004@gmail.com</a>
+        </address>
+        <br>
+
+        <!-- Delivery Information -->
+        <div>
+            <strong>Delivery Hours:</strong>
+            <ul>
+                <li>Monday - Friday: 11:00 AM - 10:30 PM</li>
+                <li>Saturday - Sunday: 10:00 AM - 11:30 PM</li>
+            </ul>
+            <p><em>Free delivery on all orders within a 5km radius!</em></p>
+        </div>
+        <hr>
+
+        <!-- Your original copyright and class info -->
+        <p style="text-align: center;"><small>&copy; 2026 My Recipe Book. All rights reserved.</small></p>
     </footer>
 </body>
 
