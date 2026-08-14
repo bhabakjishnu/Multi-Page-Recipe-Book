@@ -4,60 +4,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Fried Rice recipe with ingredients, cooking instructions and progress status.">
+
     <title>Fried Rice - My Recipe Book</title>
 </head>
 
-<body style="font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #fdfdfd; color: #333;">
+<body
+    style="margin: 0; padding: 0; background-color: #fdfdfd; color: #333; font-family: Arial, Helvetica, sans-serif; line-height: 1.6;">
 
-    <header style="background-color: #f9f9f9; padding: 20px; text-align: center; border-bottom: 1px solid #ddd;">
-        <h1 style="color: #d35400; margin: 0;">My Recipe Book</h1>
-        <nav style="margin-top: 10px;">
-            <a href="index.html" style="text-decoration: none; color: #27ae60; font-weight: bold; padding: 8px 16px; border: 2px solid #27ae60; border-radius: 20px; transition: 0.3s;">
+    <header
+        style="padding: 25px 20px; text-align: center; background-color: #f9f9f9; border-bottom: 1px solid #ddd;">
+
+        <h1 style="margin: 0; color: #d35400; font-size: 2rem;">
+            My Recipe Book
+        </h1>
+
+        <nav aria-label="Main navigation" style="margin-top: 15px;">
+
+            <a href="index.html"
+                style="display: inline-block; padding: 8px 18px; color: #27ae60; text-decoration: none; font-weight: bold; border: 2px solid #27ae60; border-radius: 20px;">
                 &larr; Back to Home
             </a>
+
         </nav>
+
     </header>
 
-    <main style="max-width: 900px; margin: 30px auto; padding: 0 20px;">
-        
-        <article style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-            
+
+    <main
+        style="max-width: 950px; margin: 30px auto; padding: 0 20px; box-sizing: border-box;">
+
+        <article
+            style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); box-sizing: border-box;">
+
             <header style="text-align: center; margin-bottom: 30px;">
-                <h2 style="font-size: 2.2em; color: #333; margin-bottom: 15px;">Fried Rice (ফ্রাইড রাইস)</h2>
-                <img src="Friedrice.jpg" alt="Fried Rice" style="width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+
+                <h2 style="margin: 0 0 20px; color: #333; font-size: 2.2rem;">
+                    Fried Rice (ফ্রাইড রাইস)
+                </h2>
+
+                <figure style="margin: 0;">
+
+                    <img src="Friedrice.jpg"
+                        alt="Homemade Fried Rice"
+                        width="500"
+                        height="500"
+                        loading="lazy"
+                        style="display: block; width: 100%; max-width: 500px; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+
+                    <figcaption style="margin-top: 10px; color: #666; font-size: 0.9rem;">
+                        Homemade Fried Rice with vegetables and nuts
+                    </figcaption>
+
+                </figure>
+
             </header>
 
-            <section style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; margin-bottom: 20px;">
-                
-                <div style="flex: 1; min-width: 250px; background-color: #fff3e0; padding: 25px; border-radius: 8px;">
-                    <h3 style="color: #d35400; margin-top: 0; border-bottom: 2px solid #f39c12; padding-bottom: 5px;">Ingredients</h3>
-                    <ul style="list-style-type: square; padding-left: 20px; margin-bottom: 0;">
-                        <li style="margin-bottom: 8px;">2 cups Basmati Rice, cooked & cooled</li>
-                        <li style="margin-bottom: 8px;">1/2 cup Carrots, finely chopped</li>
-                        <li style="margin-bottom: 8px;">1/2 cup Beans, finely chopped</li>
-                        <li style="margin-bottom: 8px;">1/4 cup Cashews and Raisins</li>
-                        <li style="margin-bottom: 8px;">2 tbsp Ghee (Clarified Butter)</li>
-                        <li>Whole spices (Cardamom, Cloves, Cinnamon)</li>
-                    </ul>
-                </div>
 
-                <div style="flex: 2; min-width: 300px;">
-                    <h3 style="color: #d35400; margin-top: 0; border-bottom: 2px solid #f39c12; padding-bottom: 5px;">Instructions</h3>
-                    <ol style="padding-left: 20px; margin-bottom: 0;">
-                        <li style="margin-bottom: 12px;"><strong>Prep the Rice:</strong> Cook the basmati rice so it is about 90% done. Spread it on a tray to cool completely to prevent it from turning mushy.</li>
-                        <li style="margin-bottom: 12px;"><strong>Fry the Nuts:</strong> Heat ghee in a large wok and lightly fry the cashews and raisins until golden. Remove and set aside.</li>
-                        <li style="margin-bottom: 12px;"><strong>Sauté Vegetables:</strong> In the same ghee, add the whole spices. Toss in the carrots and beans, adding a pinch of salt and sugar, and fry until tender but still crisp.</li>
-                        <li style="margin-bottom: 12px;"><strong>Toss:</strong> Gently fold the cooled rice into the vegetables. Add the fried nuts and mix well over low heat.</li>
-                        <li><strong>Serve:</strong> Perfect alongside Chicken or Mutton Kosha.</li>
+            <section
+                aria-label="Fried Rice recipe details"
+                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">
+
+                <section
+                    aria-labelledby="ingredients-heading"
+                    style="flex: 1 1 280px; padding: 25px; background-color: #fff3e0; border-radius: 10px; box-sizing: border-box;">
+
+                    <h3 id="ingredients-heading"
+                        style="margin: 0 0 15px; padding-bottom: 8px; color: #d35400; border-bottom: 2px solid #f39c12;">
+                        Ingredients
+                    </h3>
+
+                    <ul style="margin: 0; padding-left: 22px;">
+
+                        <li style="margin-bottom: 10px;">
+                            2 cups Basmati Rice, cooked and cooled
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            1/2 cup Carrots, finely chopped
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            1/2 cup Beans, finely chopped
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            1/4 cup Cashews and Raisins
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            2 tbsp Ghee
+                        </li>
+
+                        <li>
+                            Cardamom, Cloves and Cinnamon
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <section
+                    aria-labelledby="instructions-heading"
+                    style="flex: 2 1 400px;">
+
+                    <h3 id="instructions-heading"
+                        style="margin: 0 0 15px; padding-bottom: 8px; color: #d35400; border-bottom: 2px solid #f39c12;">
+                        Instructions
+                    </h3>
+
+                    <ol style="margin: 0; padding-left: 25px;">
+
+                        <li style="margin-bottom: 15px;">
+                            <strong>Prep the Rice:</strong>
+                            Cook basmati rice until about 90% done.
+                            Spread it on a tray and cool completely.
+                        </li>
+
+                        <li style="margin-bottom: 15px;">
+                            <strong>Fry the Nuts:</strong>
+                            Heat ghee and fry cashews and raisins until golden.
+                            Remove and set aside.
+                        </li>
+
+                        <li style="margin-bottom: 15px;">
+                            <strong>Sauté Vegetables:</strong>
+                            Add whole spices, carrots and beans.
+                            Fry until tender but still crisp.
+                        </li>
+
+                        <li style="margin-bottom: 15px;">
+                            <strong>Toss:</strong>
+                            Gently fold cooled rice into the vegetables.
+                            Add fried nuts and mix over low heat.
+                        </li>
+
+                        <li>
+                            <strong>Serve:</strong>
+                            Serve hot with Chicken Kosha or Mutton Kosha.
+                        </li>
+
                     </ol>
-                </div>
+
+                </section>
 
             </section>
+
+
+            <!-- ==================== COOKING PROGRESS ==================== -->
+
+            <section
+                aria-labelledby="progress-heading"
+                style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
+
+                <h3 id="progress-heading"
+                    style="margin: 0 0 12px; color: #d35400;">
+                    Cooking Progress
+                </h3>
+
+                <p style="margin: 0 0 10px; color: #555;">
+                    Current Status: <strong>Completed</strong>
+                </p>
+
+                <progress
+                    value="100"
+                    max="100"
+                    aria-label="Fried Rice cooking progress: 100 percent"
+                    style="width: 100%; height: 24px;">
+                    100%
+                </progress>
+
+                <p style="margin: 8px 0 0; text-align: right; color: #27ae60; font-size: 0.9rem;">
+                    100% Complete
+                </p>
+
+            </section>
+
         </article>
+
     </main>
 
-    <footer style="text-align: center; padding: 20px; background-color: #f9f9f9; border-top: 1px solid #ddd; margin-top: 40px;">
-        <p style="margin: 0; color: #555;"><small>&copy; 2026 My Recipe Book. All rights reserved.</small></p>
+
+    <footer
+        style="margin-top: 40px; padding: 25px 20px; text-align: center; background-color: #f9f9f9; border-top: 1px solid #ddd;">
+
+        <p style="margin: 0; color: #555;">
+            <small>&copy; 2026 My Recipe Book. All rights reserved.</small>
+        </p>
+
     </footer>
+
 </body>
+
 </html>

@@ -4,173 +4,446 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Recipe Book - A collection of delicious homemade recipes.">
     <title>My Recipe Book - Home</title>
 </head>
 
-<body>
-    <header>
-        <h1 style="text-align: center;">Welcome to the Ultimate Recipe Book</h1>
-        <hr>
-        <!-- Wrapper div using inline Flexbox to align items side-by-side -->
-        <!-- Refactored: Added flex-wrap for mobile responsiveness, centered content, and styled images -->
-        <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; padding: 20px 0;">
+<body
+    style="margin: 0; background-color: #fffaf5; color: #333; font-family: Arial, Helvetica, sans-serif; line-height: 1.6;">
 
-            <figure style="margin: 0; text-align: center;">
-                <a href="Mutton.html" style="text-decoration: none; color: inherit;">
-                    <img src="Mutton.jpg" alt="Mutton Kosha" width="290" height="290"
-                        style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
-                </a>
-                <figcaption style="margin-top: 10px; font-size: 1.1em;"><strong>মটন কষা</strong></figcaption>
-            </figure>
+    <!-- Header -->
+    <header style="padding: 30px 20px 10px; text-align: center;">
 
-            <figure style="margin: 0; text-align: center;">
-                <a href="Chicken.html" style="text-decoration: none; color: inherit;">
-                    <img src="Chicken.jpg" alt="Chicken Kosha" width="290" height="290"
-                        style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
-                </a>
-                <figcaption style="margin-top: 10px; font-size: 1.1em;"><strong>চিকেন কষা</strong></figcaption>
-            </figure>
+        <h1 style="margin: 0 0 10px; color: #d35400; font-size: 2.2rem;">
+            Welcome to the Ultimate Recipe Book
+        </h1>
 
-            <figure style="margin: 0; text-align: center;">
-                <a href="Friedrice.html" style="text-decoration: none; color: inherit;">
-                    <img src="Friedrice.jpg" alt="Fried Rice" width="290" height="290"
-                        style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
-                </a>
-                <figcaption style="margin-top: 10px; font-size: 1.1em;"><strong>ফ্রাইড রাইস</strong></figcaption>
-            </figure>
+        <p style="margin: 0 0 20px; color: #666;">
+            Discover delicious homemade recipes for every occasion.
+        </p>
 
-            <figure style="margin: 0; text-align: center;">
-                <a href="Butternaan.html" style="text-decoration: none; color: inherit;">
-                    <img src="Butternaan.jpg" alt="Butter Naan" width="290" height="290"
-                        style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
-                </a>
-                <figcaption style="margin-top: 10px; font-size: 1.1em;"><strong>বাটার নান</strong></figcaption>
-            </figure>
+        <hr style="border: 0; border-top: 2px solid #f0d5c0;">
 
-            <figure style="margin: 0; text-align: center;">
-                <a href="Khichuri.html" style="text-decoration: none; color: inherit;">
-                    <img src="Khichuri.jpg" alt="Khichuri" width="290" height="290"
-                        style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
-                </a>
-                <figcaption style="margin-top: 10px; font-size: 1.1em;"><strong>খিচুরি</strong></figcaption>
-            </figure>
+        <!-- Recipe Gallery -->
+        <section aria-labelledby="featured-recipes">
 
-            <figure style="margin: 0; text-align: center;">
-                <a href="Sabjivat.html" style="text-decoration: none; color: inherit;">
-                    <img src="Sabjivat.jpg" alt="Sabjivat" width="290" height="290"
-                        style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
-                </a>
-                <figcaption style="margin-top: 10px; font-size: 1.1em;"><strong>সবজি ভাত</strong></figcaption>
-            </figure>
-        </div>
-        <hr>
-    </header>
-    <main>
-        <nav>
-            <h2>Our Recipes</h2>
-            <ul>
-                <!-- Relative Paths: Linking to files in the same folder -->
-                <li><a href="Mutton.html">Mutton Curry</a></li>
-                <li><a href="Chicken.html">Chicken Curry</a></li>
-                <li><a href="Friedrice.html">Fried Rice</a></li>
-                <li><a href="Butternaan.html">Butter Naan</a></li>
-                <li><a href="Khichuri.html">Khichuri</a></li>
-                <li><a href="Sabjivat.html">Sabjivat</a></li>
-            </ul>
-            <h2>Inspiration</h2>
-            <ul>
-                <!-- Absolute Path & Target Attribute: Linking to a full URL and opening in a new tab -->
-                <li><a href="https://www.foodnetwork.com" target="_blank">Visit Food Network (Opens in new tab)</a></li>
-            </ul>
-        </nav>
-        <section id="Cooking-Progress">
-            <h2>Cooking Progress</h2>
-            <!-- Refactored: Removed deprecated attributes, used inline CSS3 for structure and styling -->
-            <table
-                style="width: 100%; max-width: 800px; border-collapse: collapse; margin-top: 15px; font-family: sans-serif; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                <thead style="background-color: #f4f4f4; color: #333;">
-                    <tr>
-                        <th style="border: 1px solid #ddd; padding: 12px; text-align: center;">Sr. No.</th>
-                        <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Recipe</th>
-                        <th style="border: 1px solid #ddd; padding: 12px; text-align: center;">Status</th>
-                        <th style="border: 1px solid #ddd; padding: 12px; text-align: center;">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">1</td>
-                        <td style="border: 1px solid #ddd; padding: 12px;">Mutton Curry</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">In Progress</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;"><progress value="50"
-                                max="100" style="width: 100%; height: 20px;">50%</progress></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">2</td>
-                        <td style="border: 1px solid #ddd; padding: 12px;">Chicken Curry</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">Completed</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;"><progress value="100"
-                                max="100" style="width: 100%; height: 20px;">100%</progress></td>
-                    </tr>
-                    <!-- Add the rest of your table rows following this exact same <td> styling pattern -->
-                    <tr>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">3</td>
-                        <td style="border: 1px solid #ddd; padding: 12px;">Fried Rice</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">Not Started</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;"><progress value="0"
-                                max="100" style="width: 100%; height: 20px;">0%</progress></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">4</td>
-                        <td style="border: 1px solid #ddd; padding: 12px;">Butter Naan</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">In Progress</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;"><progress value="30"
-                                max="100" style="width: 100%; height: 20px;">30%</progress></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">5</td>
-                        <td style="border: 1px solid #ddd; padding: 12px;">Khichuri</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">Completed</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;"><progress value="100"
-                                max="100" style="width: 100%; height: 20px;">100%</progress></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">6</td>
-                        <td style="border: 1px solid #ddd; padding: 12px;">Sabjivat</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">Not Started</td>
-                        <td style="border: 1px solid #ddd; padding: 12px; text-align: center;"><progress value="0"
-                                max="100" style="width: 100%; height: 20px;">0%</progress></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-    <footer>
-        <hr>
+            <h2 id="featured-recipes" style="margin: 25px 0 10px; color: #444;">
+                Featured Recipes
+            </h2>
 
-        <!-- Refactored: Flexbox used to create a two-column footer that looks professional -->
-        <div
-            style="display: flex; flex-wrap: wrap; justify-content: space-between; background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 20px 0;">
 
-            <address style="font-style: normal; line-height: 1.6; min-width: 250px; margin-bottom: 20px;">
-                <strong style="font-size: 1.2em; color: #d35400;">My Recipe Book Kitchen</strong><br>
-                Sat Simulia, Haringhata, Nadia, WB 741257<br>
-                📞 <a href="tel:+916294131405" style="color: #333; text-decoration: none;">+91 62941 31405</a><br>
-                ✉️ <a href="mailto:bhabakjishnu2004@gmail.com"
-                    style="color: #333; text-decoration: none;">bhabakjishnu2004@gmail.com</a>
-            </address>
+                <!-- Mutton -->
+                <article style="width: 290px; max-width: 100%; text-align: center;">
 
-            <div style="line-height: 1.6; min-width: 250px;">
-                <strong style="font-size: 1.2em; color: #d35400;">Delivery Hours:</strong>
-                <ul style="list-style-type: square; padding-left: 20px; margin-top: 10px;">
-                    <li>Mon - Fri: 11:00 AM - 10:30 PM</li>
-                    <li>Sat - Sun: 10:00 AM - 11:30 PM</li>
-                </ul>
-                <p style="margin: 0; color: #27ae60;"><em>✨ Free delivery on all orders within a 5km radius!</em></p>
+                    <a href="Mutton.html" style="display: block; color: inherit; text-decoration: none;">
+
+                        <img src="Mutton.jpg" alt="Mutton Kosha" width="290" height="290" loading="lazy"
+                            style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+                        <h3 style="margin: 10px 0 0; font-size: 1.1rem;">
+                            মটন কষা
+                        </h3>
+
+                    </a>
+
+                </article>
+
+                <!-- Chicken -->
+                <article style="width: 290px; max-width: 100%; text-align: center;">
+
+                    <a href="Chicken.html" style="display: block; color: inherit; text-decoration: none;">
+
+                        <img src="Chicken.jpg" alt="Chicken Kosha" width="290" height="290" loading="lazy"
+                            style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+                        <h3 style="margin: 10px 0 0; font-size: 1.1rem;">
+                            চিকেন কষা
+                        </h3>
+
+                    </a>
+
+                </article>
+
+                <!-- Fried Rice -->
+                <article style="width: 290px; max-width: 100%; text-align: center;">
+
+                    <a href="Friedrice.html" style="display: block; color: inherit; text-decoration: none;">
+
+                        <img src="Friedrice.jpg" alt="Fried Rice" width="290" height="290" loading="lazy"
+                            style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+                        <h3 style="margin: 10px 0 0; font-size: 1.1rem;">
+                            ফ্রাইড রাইস
+                        </h3>
+
+                    </a>
+
+                </article>
+
+                <!-- Butter Naan -->
+                <article style="width: 290px; max-width: 100%; text-align: center;">
+
+                    <a href="Butternaan.html" style="display: block; color: inherit; text-decoration: none;">
+
+                        <img src="Butternaan.jpg" alt="Butter Naan" width="290" height="290" loading="lazy"
+                            style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+                        <h3 style="margin: 10px 0 0; font-size: 1.1rem;">
+                            বাটার নান
+                        </h3>
+
+                    </a>
+
+                </article>
+
+                <!-- Khichuri -->
+                <article style="width: 290px; max-width: 100%; text-align: center;">
+
+                    <a href="Khichuri.html" style="display: block; color: inherit; text-decoration: none;">
+
+                        <img src="Khichuri.jpg" alt="Khichuri" width="290" height="290" loading="lazy"
+                            style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+                        <h3 style="margin: 10px 0 0; font-size: 1.1rem;">
+                            খিচুরি
+                        </h3>
+
+                    </a>
+
+                </article>
+
+                <!-- Sabjivat -->
+                <article style="width: 290px; max-width: 100%; text-align: center;">
+
+                    <a href="Sabjivat.html" style="display: block; color: inherit; text-decoration: none;">
+
+                        <img src="Sabjivat.jpg" alt="Sabjivat" width="290" height="290" loading="lazy"
+                            style="display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+                        <h3 style="margin: 10px 0 0; font-size: 1.1rem;">
+                            সবজি ভাত
+                        </h3>
+
+                    </a>
+
+                </article>
+
             </div>
 
+        </section>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main style="max-width: 1100px; margin: 0 auto; padding: 10px 20px 30px;">
+
+        <!-- Navigation -->
+        <nav aria-label="Recipe navigation"
+            style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 30px;">
+
+            <h2 style="margin-top: 0; color: #d35400;">
+                Our Recipes
+            </h2>
+
+            <ul style="padding-left: 25px; margin-bottom: 25px;">
+
+                <li style="margin-bottom: 8px;">
+                    <a href="Mutton.html" style="color: #c0392b; text-decoration: none;">
+                        Mutton Curry
+                    </a>
+                </li>
+
+                <li style="margin-bottom: 8px;">
+                    <a href="Chicken.html" style="color: #c0392b; text-decoration: none;">
+                        Chicken Curry
+                    </a>
+                </li>
+
+                <li style="margin-bottom: 8px;">
+                    <a href="Friedrice.html" style="color: #c0392b; text-decoration: none;">
+                        Fried Rice
+                    </a>
+                </li>
+
+                <li style="margin-bottom: 8px;">
+                    <a href="Butternaan.html" style="color: #c0392b; text-decoration: none;">
+                        Butter Naan
+                    </a>
+                </li>
+
+                <li style="margin-bottom: 8px;">
+                    <a href="Khichuri.html" style="color: #c0392b; text-decoration: none;">
+                        Khichuri
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Sabjivat.html" style="color: #c0392b; text-decoration: none;">
+                        Sabjivat
+                    </a>
+                </li>
+
+            </ul>
+
+            <h2 style="color: #d35400;">
+                Inspiration
+            </h2>
+
+            <ul style="padding-left: 25px; margin-bottom: 0;">
+
+                <li>
+                    <a href="https://www.foodnetwork.com" target="_blank" rel="noopener noreferrer"
+                        style="color: #c0392b; text-decoration: none;">
+                        Visit Food Network
+                    </a>
+                    <span style="color: #777;">
+                        (Opens in new tab)
+                    </span>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- Cooking Progress -->
+        <section id="cooking-progress" aria-labelledby="cooking-progress-heading">
+
+            <h2 id="cooking-progress-heading" style="color: #d35400; margin-bottom: 15px;">
+                Cooking Progress
+            </h2>
+
+            <!-- Responsive Table Wrapper -->
+            <div
+                style="width: 100%; overflow-x: auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+
+                <table style="width: 100%; min-width: 650px; border-collapse: collapse;">
+
+                    <caption style="padding: 15px; text-align: left; font-weight: bold; color: #555;">
+                        Current progress of recipes
+                    </caption>
+
+                    <thead style="background-color: #f4f4f4; color: #333;">
+
+                        <tr>
+
+                            <th scope="col" style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                Sr. No.
+                            </th>
+
+                            <th scope="col" style="border: 1px solid #ddd; padding: 12px; text-align: left;">
+                                Recipe
+                            </th>
+
+                            <th scope="col" style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                Status
+                            </th>
+
+                            <th scope="col" style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                Progress
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <!-- Mutton -->
+                        <tr>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                1
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px;">
+                                Mutton Curry
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                In Progress
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                <progress value="50" max="100" aria-label="Mutton Curry progress: 50 percent"
+                                    style="width: 100%; height: 20px;">
+                                    50%
+                                </progress>
+                            </td>
+
+                        </tr>
+
+                        <!-- Chicken -->
+                        <tr>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                2
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px;">
+                                Chicken Curry
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                Completed
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                <progress value="100" max="100" aria-label="Chicken Curry progress: 100 percent"
+                                    style="width: 100%; height: 20px;">
+                                    100%
+                                </progress>
+                            </td>
+
+                        </tr>
+
+                        <!-- Fried Rice -->
+                        <tr>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                3
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px;">
+                                Fried Rice
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                Not Started
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                <progress value="0" max="100" aria-label="Fried Rice progress: 0 percent"
+                                    style="width: 100%; height: 20px;">
+                                    0%
+                                </progress>
+                            </td>
+
+                        </tr>
+
+                        <!-- Butter Naan -->
+                        <tr>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                4
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px;">
+                                Butter Naan
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                In Progress
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                <progress value="30" max="100" aria-label="Butter Naan progress: 30 percent"
+                                    style="width: 100%; height: 20px;">
+                                    30%
+                                </progress>
+                            </td>
+
+                        </tr>
+
+                        <!-- Khichuri -->
+                        <tr>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                5
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px;">
+                                Khichuri
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                Completed
+                            </td>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                <progress value="100" max="100" aria-label="Khichuri progress: 100 percent"
+                                    style="width: 100%; height: 20px;">
+                                    100%
+                                </progress>
+                            </td>
+
+                        </tr>
+
+                        <!-- Sabjivat -->
+                        <tr>
+
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                6
+                            </td>
+                            <td style="border: 1px solid #ddd; padding: 12px;">
+                                Sabjivat
+                            </td>
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                Not Started
+                            </td>
+                            <td style="border: 1px solid #ddd; padding: 12px; text-align: center;">
+                                <progress value="0" max="100" aria-label="Sabjivat progress: 0 percent"
+                                    style="width: 100%; height: 20px;">
+                                    0%
+                                </progress>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer style="margin-top: 20px; padding: 20px;">
+        <hr style="border: 0; border-top: 2px solid #f0d5c0;">
+        <div
+            style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; max-width: 1100px; margin: 20px auto; padding: 25px; background-color: #ffffff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); box-sizing: border-box;">
+            <!-- Contact Information -->
+            <address style="font-style: normal; line-height: 1.8; min-width: 250px; flex: 1;">
+                <strong style="font-size: 1.2rem; color: #d35400;">
+                    My Recipe Book Kitchen
+                </strong>
+                <br>
+                Sat Simulia, Haringhata, Nadia, WB 741257
+                <br>
+                📞
+                <a href="tel:+916294131405" style="color: #333; text-decoration: none;">
+                    +91 62941 31405
+                </a>
+                <br>
+                ✉️
+                <a href="mailto:bhabakjishnu2004@gmail.com" style="color: #333; text-decoration: none;">
+                    bhabakjishnu2004@gmail.com
+                </a>
+            </address>
+            <!-- Delivery Information -->
+            <section style="min-width: 250px; flex: 1;">
+                <strong style="font-size: 1.2rem; color: #d35400;">
+                    Delivery Hours:
+                </strong>
+                <ul style="list-style-type: square; padding-left: 20px; margin-top: 10px;">
+                    <li>
+                        Mon - Fri: 11:00 AM - 10:30 PM
+                    </li>
+                    <li>
+                        Sat - Sun: 10:00 AM - 11:30 PM
+                    </li>
+                </ul>
+                <p style="margin: 0; color: #27ae60;">
+                    <em>
+                        ✨ Free delivery on all orders within a 5km radius!
+                    </em>
+                </p>
+            </section>
         </div>
-        <hr>
-        <p style="text-align: center;"><small>&copy; 2026 My Recipe Book. All rights reserved.</small></p>
+        <hr style="border: 0; border-top: 1px solid #ddd;">
+        <p style="text-align: center; margin: 15px 0 0; color: #666;">
+            <small>
+                &copy; 2026 My Recipe Book. All rights reserved.
+            </small>
+        </p>
     </footer>
 </body>
 

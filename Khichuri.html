@@ -4,60 +4,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Traditional Bengali Khichuri recipe with ingredients, cooking instructions and progress status.">
+
     <title>Khichuri - My Recipe Book</title>
 </head>
 
-<body style="font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #fdfdfd; color: #333;">
+<body
+    style="margin: 0; padding: 0; background-color: #fdfdfd; color: #333; font-family: Arial, Helvetica, sans-serif; line-height: 1.6;">
 
-    <header style="background-color: #f9f9f9; padding: 20px; text-align: center; border-bottom: 1px solid #ddd;">
-        <h1 style="color: #d35400; margin: 0;">My Recipe Book</h1>
-        <nav style="margin-top: 10px;">
-            <a href="index.html" style="text-decoration: none; color: #27ae60; font-weight: bold; padding: 8px 16px; border: 2px solid #27ae60; border-radius: 20px; transition: 0.3s;">
+    <header
+        style="padding: 25px 20px; text-align: center; background-color: #f9f9f9; border-bottom: 1px solid #ddd;">
+
+        <h1 style="margin: 0; color: #d35400; font-size: 2rem;">
+            My Recipe Book
+        </h1>
+
+        <nav aria-label="Main navigation" style="margin-top: 15px;">
+
+            <a href="index.html"
+                style="display: inline-block; padding: 8px 18px; color: #27ae60; text-decoration: none; font-weight: bold; border: 2px solid #27ae60; border-radius: 20px;">
                 &larr; Back to Home
             </a>
+
         </nav>
+
     </header>
 
-    <main style="max-width: 900px; margin: 30px auto; padding: 0 20px;">
-        
-        <article style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-            
+
+    <main
+        style="max-width: 950px; margin: 30px auto; padding: 0 20px; box-sizing: border-box;">
+
+        <article
+            style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); box-sizing: border-box;">
+
             <header style="text-align: center; margin-bottom: 30px;">
-                <h2 style="font-size: 2.2em; color: #333; margin-bottom: 15px;">Khichuri (খিচুরি)</h2>
-                <img src="Khichuri.jpg" alt="Khichuri" style="width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+
+                <h2 style="margin: 0 0 20px; color: #333; font-size: 2.2rem;">
+                    Khichuri (খিচুরি)
+                </h2>
+
+                <figure style="margin: 0;">
+
+                    <img src="Khichuri.jpg"
+                        alt="Traditional Bengali Khichuri"
+                        width="500"
+                        height="500"
+                        loading="lazy"
+                        style="display: block; width: 100%; max-width: 500px; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+
+                    <figcaption style="margin-top: 10px; color: #666; font-size: 0.9rem;">
+                        Traditional Bengali Khichuri
+                    </figcaption>
+
+                </figure>
+
             </header>
 
-            <section style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; margin-bottom: 20px;">
-                
-                <div style="flex: 1; min-width: 250px; background-color: #fff3e0; padding: 25px; border-radius: 8px;">
-                    <h3 style="color: #d35400; margin-top: 0; border-bottom: 2px solid #f39c12; padding-bottom: 5px;">Ingredients</h3>
-                    <ul style="list-style-type: square; padding-left: 20px; margin-bottom: 0;">
-                        <li style="margin-bottom: 8px;">1 cup Gobindobhog Rice (or short-grain rice)</li>
-                        <li style="margin-bottom: 8px;">1 cup Moong Dal (Roasted)</li>
-                        <li style="margin-bottom: 8px;">1 Potato, cubed & 1/2 cup Cauliflower florets</li>
-                        <li style="margin-bottom: 8px;">1 tbsp Ginger paste</li>
-                        <li style="margin-bottom: 8px;">Mustard oil and Ghee</li>
-                        <li>Dry red chilies, Bay leaves, Cumin, Turmeric</li>
-                    </ul>
-                </div>
 
-                <div style="flex: 2; min-width: 300px;">
-                    <h3 style="color: #d35400; margin-top: 0; border-bottom: 2px solid #f39c12; padding-bottom: 5px;">Instructions</h3>
-                    <ol style="padding-left: 20px; margin-bottom: 0;">
-                        <li style="margin-bottom: 12px;"><strong>Prep:</strong> Dry roast the moong dal until fragrant. Wash the rice and dal together. Lightly fry the potatoes and cauliflower in mustard oil.</li>
-                        <li style="margin-bottom: 12px;"><strong>Temper:</strong> In a large heavy-bottomed pot, heat mustard oil and ghee. Add bay leaves, cumin seeds, and dry red chilies.</li>
-                        <li style="margin-bottom: 12px;"><strong>Spices:</strong> Sauté ginger paste with turmeric and a little cumin powder until fragrant.</li>
-                        <li style="margin-bottom: 12px;"><strong>Boil:</strong> Add the washed rice and dal mixture, pour in enough warm water (about 5-6 cups), and bring to a boil. Add the fried vegetables halfway through cooking.</li>
-                        <li><strong>Simmer:</strong> Cook until the rice and dal melt together into a porridge-like consistency. Top with a spoonful of ghee before serving.</li>
+            <section
+                aria-label="Khichuri recipe details"
+                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">
+
+                <section
+                    aria-labelledby="ingredients-heading"
+                    style="flex: 1 1 280px; padding: 25px; background-color: #fff3e0; border-radius: 10px; box-sizing: border-box;">
+
+                    <h3 id="ingredients-heading"
+                        style="margin: 0 0 15px; padding-bottom: 8px; color: #d35400; border-bottom: 2px solid #f39c12;">
+                        Ingredients
+                    </h3>
+
+                    <ul style="margin: 0; padding-left: 22px;">
+
+                        <li style="margin-bottom: 10px;">
+                            1 cup Gobindobhog Rice
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            1 cup Roasted Moong Dal
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            1 Potato and 1/2 cup Cauliflower
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            1 tbsp Ginger Paste
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            Mustard Oil and Ghee
+                        </li>
+
+                        <li>
+                            Dry Red Chilies, Bay Leaves, Cumin and Turmeric
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <section
+                    aria-labelledby="instructions-heading"
+                    style="flex: 2 1 400px;">
+
+                    <h3 id="instructions-heading"
+                        style="margin: 0 0 15px; padding-bottom: 8px; color: #d35400; border-bottom: 2px solid #f39c12;">
+                        Instructions
+                    </h3>
+
+                    <ol style="margin: 0; padding-left: 25px;">
+
+                        <li style="margin-bottom: 15px;">
+                            <strong>Prep:</strong>
+                            Dry roast the moong dal until fragrant.
+                            Wash rice and dal together.
+                            Lightly fry potatoes and cauliflower.
+                        </li>
+
+                        <li style="margin-bottom: 15px;">
+                            <strong>Temper:</strong>
+                            Heat mustard oil and ghee.
+                            Add bay leaves, cumin and dry red chilies.
+                        </li>
+
+                        <li style="margin-bottom: 15px;">
+                            <strong>Spices:</strong>
+                            Sauté ginger paste with turmeric and cumin powder.
+                        </li>
+
+                        <li style="margin-bottom: 15px;">
+                            <strong>Boil:</strong>
+                            Add rice and dal with about 5–6 cups of warm water.
+                            Add vegetables halfway through cooking.
+                        </li>
+
+                        <li>
+                            <strong>Simmer:</strong>
+                            Cook until the rice and dal become soft and porridge-like.
+                            Finish with ghee.
+                        </li>
+
                     </ol>
-                </div>
+
+                </section>
 
             </section>
+
+
+            <!-- ==================== COOKING PROGRESS ==================== -->
+
+            <section
+                aria-labelledby="progress-heading"
+                style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
+
+                <h3 id="progress-heading"
+                    style="margin: 0 0 12px; color: #d35400;">
+                    Cooking Progress
+                </h3>
+
+                <p style="margin: 0 0 10px; color: #555;">
+                    Current Status: <strong>Completed</strong>
+                </p>
+
+                <progress
+                    value="100"
+                    max="100"
+                    aria-label="Khichuri cooking progress: 100 percent"
+                    style="width: 100%; height: 24px;">
+                    100%
+                </progress>
+
+                <p style="margin: 8px 0 0; text-align: right; color: #27ae60; font-size: 0.9rem;">
+                    100% Complete
+                </p>
+
+            </section>
+
         </article>
+
     </main>
 
-    <footer style="text-align: center; padding: 20px; background-color: #f9f9f9; border-top: 1px solid #ddd; margin-top: 40px;">
-        <p style="margin: 0; color: #555;"><small>&copy; 2026 My Recipe Book. All rights reserved.</small></p>
+
+    <footer
+        style="margin-top: 40px; padding: 25px 20px; text-align: center; background-color: #f9f9f9; border-top: 1px solid #ddd;">
+
+        <p style="margin: 0; color: #555;">
+            <small>&copy; 2026 My Recipe Book. All rights reserved.</small>
+        </p>
+
     </footer>
+
 </body>
+
 </html>
