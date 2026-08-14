@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mutton Kosha - My Recipe Book</title>
 </head>
-<body>
-    
+
+<body style="font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #fdfdfd; color: #333;">
+
+    <!-- Navigation Header -->
+    <header style="background-color: #f9f9f9; padding: 20px; text-align: center; border-bottom: 1px solid #ddd;">
+        <h1 style="color: #d35400; margin: 0;">My Recipe Book</h1>
+        <nav style="margin-top: 10px;">
+            <!-- Make sure 'index.html' matches the exact name of your main home page file -->
+            <a href="index.html" style="text-decoration: none; color: #27ae60; font-weight: bold; padding: 8px 16px; border: 2px solid #27ae60; border-radius: 20px; transition: 0.3s;">
+                &larr; Back to Home
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Recipe Content -->
+    <main style="max-width: 900px; margin: 30px auto; padding: 0 20px;">
+        
+        <!-- Recipe Card -->
+        <article style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            
+            <header style="text-align: center; margin-bottom: 30px;">
+                <h2 style="font-size: 2.2em; color: #333; margin-bottom: 15px;">Mutton Kosha (মটন কষা)</h2>
+                <!-- Reusing the image from the homepage -->
+                <img src="Mutton.jpg" alt="Mutton Kosha" style="width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+            </header>
+
+            <!-- Flexbox layout to put Ingredients and Instructions side-by-side on large screens -->
+            <section style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; margin-bottom: 20px;">
+                
+                <!-- Ingredients Section (Left side) -->
+                <div style="flex: 1; min-width: 250px; background-color: #fff3e0; padding: 25px; border-radius: 8px;">
+                    <h3 style="color: #d35400; margin-top: 0; border-bottom: 2px solid #f39c12; padding-bottom: 5px;">Ingredients</h3>
+                    <ul style="list-style-type: square; padding-left: 20px; margin-bottom: 0;">
+                        <li style="margin-bottom: 8px;">500g Mutton</li>
+                        <li style="margin-bottom: 8px;">3 large Onions, finely chopped</li>
+                        <li style="margin-bottom: 8px;">2 tbsp Ginger-Garlic paste</li>
+                        <li style="margin-bottom: 8px;">Mustard oil for cooking</li>
+                        <li style="margin-bottom: 8px;">Spices: Cumin, Coriander, Turmeric, Red Chili powder</li>
+                        <li>Salt and Sugar to taste</li>
+                    </ul>
+                </div>
+
+                <!-- Instructions Section (Right side) -->
+                <div style="flex: 2; min-width: 300px;">
+                    <h3 style="color: #d35400; margin-top: 0; border-bottom: 2px solid #f39c12; padding-bottom: 5px;">Instructions</h3>
+                    <ol style="padding-left: 20px; margin-bottom: 0;">
+                        <li style="margin-bottom: 12px;"><strong>Marinate:</strong> Coat the mutton with yogurt, turmeric, and a little mustard oil. Let it sit for at least 2 hours.</li>
+                        <li style="margin-bottom: 12px;"><strong>Temper the Oil:</strong> Heat mustard oil in a heavy-bottomed pan until it smokes, then add whole spices (cardamom, cinnamon, cloves).</li>
+                        <li style="margin-bottom: 12px;"><strong>Fry the Base:</strong> Add chopped onions and fry until deep golden brown. Stir in the ginger-garlic paste and cook until the raw smell disappears.</li>
+                        <li style="margin-bottom: 12px;"><strong>Slow Cook (Kosha):</strong> Add the marinated mutton and dry spices. Cook uncovered on medium-low heat for about an hour, stirring frequently until the meat is tender and the oil separates.</li>
+                        <li><strong>Serve:</strong> Serve piping hot with Fried Rice or Butter Naan!</li>
+                    </ol>
+                </div>
+
+            </section>
+        </article>
+
+    </main>
+
+    <!-- Simple Footer -->
+    <footer style="text-align: center; padding: 20px; background-color: #f9f9f9; border-top: 1px solid #ddd; margin-top: 40px;">
+        <p style="margin: 0; color: #555;"><small>&copy; 2026 My Recipe Book. All rights reserved.</small></p>
+    </footer>
+
 </body>
+
 </html>
