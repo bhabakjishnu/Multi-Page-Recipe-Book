@@ -1,200 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Traditional Bengali Chicken Kosha recipe with ingredients, cooking instructions and progress status.">
-
+    <meta name="description" content="Traditional Bengali Chicken Kosha recipe with ingredients, cooking instructions and progress status.">
     <title>Chicken Kosha - My Recipe Book</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
-<body
-    style="margin: 0; padding: 0; background-color: #fdfdfd; color: #333; font-family: Arial, Helvetica, sans-serif; line-height: 1.6;">
-
-    <header
-        style="padding: 25px 20px; text-align: center; background-color: #f9f9f9; border-bottom: 1px solid #ddd;">
-
-        <h1 style="margin: 0; color: #d35400; font-size: 2rem;">
-            My Recipe Book
-        </h1>
-
-        <nav aria-label="Main navigation" style="margin-top: 15px;">
-
-            <a href="/index.html"
-                style="display: inline-block; padding: 8px 18px; color: #27ae60; text-decoration: none; font-weight: bold; border: 2px solid #27ae60; border-radius: 20px;">
-                &larr; Back to Home
-            </a>
-
-        </nav>
-
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="hero-title">My Recipe Book</h1>
+            <nav aria-label="Main navigation">
+                <a href="../index.html" class="nav-back">&larr; Back to Home</a>
+            </nav>
+        </div>
     </header>
 
-
-    <main
-        style="max-width: 950px; margin: 30px auto; padding: 0 20px; box-sizing: border-box;">
-
-        <article
-            style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); box-sizing: border-box;">
-
-            <header style="text-align: center; margin-bottom: 30px;">
-
-                <h2 style="margin: 0 0 20px; color: #333; font-size: 2.2rem;">
-                    Chicken Kosha (চিকেন কষা)
-                </h2>
-
-                <figure style="margin: 0;">
-
-                    <img src="/assets/images/recipes/Chicken.jpg"
-                        alt="Traditional Bengali Chicken Kosha"
-                        width="500"
-                        height="500"
-                        loading="lazy"
-                        style="display: block; width: 100%; max-width: 500px; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-
-                    <figcaption style="margin-top: 10px; color: #666; font-size: 0.9rem;">
-                        Traditional Bengali Chicken Kosha
-                    </figcaption>
-
-                </figure>
-
+    <main class="main-content container">
+        <article>
+            <header class="recipe-detail-header">
+                <h2 class="recipe-detail-title">Chicken Kosha (চিকেন কষা)</h2>
+                <img src="../assets/images/recipes/Chicken.jpg" alt="Traditional Bengali Chicken Kosha" class="recipe-hero-image" loading="lazy">
             </header>
 
-
-            <section
-                aria-label="Chicken Kosha recipe details"
-                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">
-
-                <section
-                    aria-labelledby="ingredients-heading"
-                    style="flex: 1 1 280px; padding: 25px; background-color: #fff3e0; border-radius: 10px; box-sizing: border-box;">
-
-                    <h3 id="ingredients-heading"
-                        style="margin: 0 0 15px; padding-bottom: 8px; color: #d35400; border-bottom: 2px solid #f39c12;">
-                        Ingredients
-                    </h3>
-
-                    <ul style="margin: 0; padding-left: 22px;">
-
-                        <li style="margin-bottom: 10px;">750g Chicken, bone-in</li>
-
-                        <li style="margin-bottom: 10px;">
-                            3 Onions, finely sliced
-                        </li>
-
-                        <li style="margin-bottom: 10px;">
-                            2 Tomatoes, pureed
-                        </li>
-
-                        <li style="margin-bottom: 10px;">
-                            2 tbsp Ginger-Garlic paste
-                        </li>
-
-                        <li style="margin-bottom: 10px;">
-                            Mustard oil, Bay leaves, Green chilies
-                        </li>
-
-                        <li>
-                            Turmeric, Red Chili powder, Garam Masala
-                        </li>
-
+            <div class="recipe-body">
+                <aside class="ingredients-panel" aria-labelledby="ingredients-heading">
+                    <h3 id="ingredients-heading" class="recipe-section-title">Ingredients</h3>
+                    <ul class="ingredients-list">
+                        <li>750g Chicken, bone-in</li>
+                        <li>3 Onions, finely sliced</li>
+                        <li>2 Tomatoes, pureed</li>
+                        <li>2 tbsp Ginger-Garlic paste</li>
+                        <li>Mustard oil, Bay leaves, Green chilies</li>
+                        <li>Turmeric, Red Chili powder, Garam Masala</li>
                     </ul>
+                </aside>
 
-                </section>
-
-
-                <section
-                    aria-labelledby="instructions-heading"
-                    style="flex: 2 1 400px;">
-
-                    <h3 id="instructions-heading"
-                        style="margin: 0 0 15px; padding-bottom: 8px; color: #d35400; border-bottom: 2px solid #f39c12;">
-                        Instructions
-                    </h3>
-
-                    <ol style="margin: 0; padding-left: 25px;">
-
-                        <li style="margin-bottom: 15px;">
+                <section aria-labelledby="instructions-heading">
+                    <h3 id="instructions-heading" class="recipe-section-title">Instructions</h3>
+                    <ol class="instructions-list">
+                        <li>
                             <strong>Marinate:</strong>
-                            Mix chicken with turmeric, salt and half the
-                            ginger-garlic paste. Rest for 30 minutes.
+                            Mix chicken with turmeric, salt and half the ginger-garlic paste. Rest for 30 minutes.
                         </li>
-
-                        <li style="margin-bottom: 15px;">
+                        <li>
                             <strong>Base:</strong>
-                            Heat mustard oil and add bay leaves.
-                            Sauté onions until deeply caramelized.
+                            Heat mustard oil and add bay leaves. Sauté onions until deeply caramelized.
                         </li>
-
-                        <li style="margin-bottom: 15px;">
+                        <li>
                             <strong>Spices:</strong>
-                            Add ginger-garlic paste and tomato puree.
-                            Cook until the oil separates from the masala.
+                            Add ginger-garlic paste and tomato puree. Cook until the oil separates from the masala.
                         </li>
-
-                        <li style="margin-bottom: 15px;">
+                        <li>
                             <strong>Cook the Chicken:</strong>
-                            Add chicken and sauté on high heat for 5 minutes.
-                            Reduce heat and cook until tender.
+                            Add chicken and sauté on high heat for 5 minutes. Reduce heat and cook until tender.
                         </li>
-
                         <li>
                             <strong>Garnish:</strong>
                             Finish with garam masala and fresh green chilies.
                         </li>
-
                     </ol>
-
                 </section>
+            </div>
 
+            <section class="recipe-progress-card" aria-labelledby="progress-heading">
+                <h3 id="progress-heading" class="recipe-section-title">Cooking Progress</h3>
+                <p>Current Status: <span class="status-badge status-progress">In Progress</span></p>
+                <progress value="70" max="100" aria-label="Chicken Kosha cooking progress: 70 percent"></progress>
+                <p style="text-align: right; margin-top: 8px; color: var(--text-muted); font-size: 0.9rem;">70% Complete</p>
             </section>
-
-
-            <!-- ==================== COOKING PROGRESS ==================== -->
-
-            <section
-                aria-labelledby="progress-heading"
-                style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
-
-                <h3 id="progress-heading"
-                    style="margin: 0 0 12px; color: #d35400;">
-                    Cooking Progress
-                </h3>
-
-                <p style="margin: 0 0 10px; color: #555;">
-                    Current Status: <strong>In Progress</strong>
-                </p>
-
-                <progress
-                    value="70"
-                    max="100"
-                    aria-label="Chicken Kosha cooking progress: 70 percent"
-                    style="width: 100%; height: 24px;">
-                    70%
-                </progress>
-
-                <p style="margin: 8px 0 0; text-align: right; color: #666; font-size: 0.9rem;">
-                    70% Complete
-                </p>
-
-            </section>
-
         </article>
-
     </main>
 
-
-    <footer
-        style="margin-top: 40px; padding: 25px 20px; text-align: center; background-color: #f9f9f9; border-top: 1px solid #ddd;">
-
-        <p style="margin: 0; color: #555;">
-            <small>&copy; 2026 My Recipe Book. All rights reserved.</small>
-        </p>
-
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Recipe Book. All rights reserved.</p>
+        </div>
     </footer>
-
 </body>
-
 </html>

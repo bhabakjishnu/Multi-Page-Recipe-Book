@@ -1,214 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Traditional Bengali Mutton Kosha recipe with ingredients, cooking instructions and progress status.">
-
+    <meta name="description" content="Traditional Bengali Mutton Kosha recipe with ingredients, cooking instructions and progress status.">
     <title>Mutton Kosha - My Recipe Book</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
-<body
-    style="margin: 0; padding: 0; background-color: #fdfdfd; color: #333; font-family: Arial, Helvetica, sans-serif; line-height: 1.6;">
-
-    <!-- ==================== HEADER ==================== -->
-
-    <header
-        style="padding: 25px 20px; text-align: center; background-color: #f9f9f9; border-bottom: 1px solid #ddd;">
-
-        <h1 style="margin: 0; color: #d35400; font-size: 2rem;">
-            My Recipe Book
-        </h1>
-
-        <nav aria-label="Main navigation" style="margin-top: 15px;">
-
-            <a href="/index.html"
-                style="display: inline-block; padding: 8px 18px; color: #27ae60; text-decoration: none; font-weight: bold; border: 2px solid #27ae60; border-radius: 20px;">
-                &larr; Back to Home
-            </a>
-
-        </nav>
-
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="hero-title">My Recipe Book</h1>
+            <nav aria-label="Main navigation">
+                <a href="../index.html" class="nav-back">&larr; Back to Home</a>
+            </nav>
+        </div>
     </header>
 
-
-    <!-- ==================== MAIN ==================== -->
-
-    <main
-        style="max-width: 950px; margin: 30px auto; padding: 0 20px; box-sizing: border-box;">
-
-        <article
-            style="background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); box-sizing: border-box;">
-
-            <!-- Recipe Header -->
-
-            <header style="text-align: center; margin-bottom: 30px;">
-
-                <h2 style="margin: 0 0 20px; color: #333; font-size: 2.2rem;">
-                    Mutton Kosha (মটন কষা)
-                </h2>
-
-                <figure style="margin: 0;">
-
-                    <img src="/assets/images/recipes/Mutton.jpg"
-                        alt="Traditional Bengali Mutton Kosha"
-                        width="500"
-                        height="500"
-                        loading="lazy"
-                        style="display: block; width: 100%; max-width: 500px; height: auto; aspect-ratio: 1 / 1; object-fit: cover; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-
-                    <figcaption style="margin-top: 10px; color: #666; font-size: 0.9rem;">
-                        Traditional Bengali Mutton Kosha
-                    </figcaption>
-
-                </figure>
-
+    <main class="main-content container">
+        <article>
+            <header class="recipe-detail-header">
+                <h2 class="recipe-detail-title">Mutton Kosha (মটন কষা)</h2>
+                <img src="../assets/images/recipes/Mutton.jpg" alt="Traditional Bengali Mutton Kosha" class="recipe-hero-image" loading="lazy">
             </header>
 
-
-            <!-- ==================== RECIPE DETAILS ==================== -->
-
-            <section
-                aria-label="Mutton Kosha recipe details"
-                style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">
-
-                <!-- Ingredients -->
-
-                <section
-                    aria-labelledby="ingredients-heading"
-                    style="flex: 1 1 280px; padding: 25px; background-color: #fff3e0; border-radius: 10px; box-sizing: border-box;">
-
-                    <h3 id="ingredients-heading"
-                        style="margin: 0 0 15px; padding-bottom: 8px; color: #d35400; border-bottom: 2px solid #f39c12;">
-                        Ingredients
-                    </h3>
-
-                    <ul style="margin: 0; padding-left: 22px;">
-
-                        <li style="margin-bottom: 10px;">500g Mutton</li>
-
-                        <li style="margin-bottom: 10px;">
-                            3 large Onions, finely chopped
-                        </li>
-
-                        <li style="margin-bottom: 10px;">
-                            2 tbsp Ginger-Garlic paste
-                        </li>
-
-                        <li style="margin-bottom: 10px;">
-                            Mustard oil for cooking
-                        </li>
-
-                        <li style="margin-bottom: 10px;">
-                            Cumin, Coriander, Turmeric, Red Chili powder
-                        </li>
-
-                        <li>
-                            Salt and Sugar to taste
-                        </li>
-
+            <div class="recipe-body">
+                <aside class="ingredients-panel" aria-labelledby="ingredients-heading">
+                    <h3 id="ingredients-heading" class="recipe-section-title">Ingredients</h3>
+                    <ul class="ingredients-list">
+                        <li>500g Mutton</li>
+                        <li>3 large Onions, finely chopped</li>
+                        <li>2 tbsp Ginger-Garlic paste</li>
+                        <li>Mustard oil for cooking</li>
+                        <li>Cumin, Coriander, Turmeric, Red Chili powder</li>
+                        <li>Salt and Sugar to taste</li>
                     </ul>
+                </aside>
 
-                </section>
-
-
-                <!-- Instructions -->
-
-                <section
-                    aria-labelledby="instructions-heading"
-                    style="flex: 2 1 400px;">
-
-                    <h3 id="instructions-heading"
-                        style="margin: 0 0 15px; padding-bottom: 8px; color: #d35400; border-bottom: 2px solid #f39c12;">
-                        Instructions
-                    </h3>
-
-                    <ol style="margin: 0; padding-left: 25px;">
-
-                        <li style="margin-bottom: 15px;">
+                <section aria-labelledby="instructions-heading">
+                    <h3 id="instructions-heading" class="recipe-section-title">Instructions</h3>
+                    <ol class="instructions-list">
+                        <li>
                             <strong>Marinate:</strong>
-                            Coat the mutton with yogurt, turmeric and a little
-                            mustard oil. Let it rest for at least 2 hours.
+                            Coat the mutton with yogurt, turmeric and a little mustard oil. Let it rest for at least 2 hours.
                         </li>
-
-                        <li style="margin-bottom: 15px;">
+                        <li>
                             <strong>Temper the Oil:</strong>
-                            Heat mustard oil until it smokes slightly.
-                            Add cardamom, cinnamon and cloves.
+                            Heat mustard oil until it smokes slightly. Add cardamom, cinnamon and cloves.
                         </li>
-
-                        <li style="margin-bottom: 15px;">
+                        <li>
                             <strong>Fry the Base:</strong>
-                            Add chopped onions and fry until deep golden brown.
-                            Add ginger-garlic paste and cook until fragrant.
+                            Add chopped onions and fry until deep golden brown. Add ginger-garlic paste and cook until fragrant.
                         </li>
-
-                        <li style="margin-bottom: 15px;">
+                        <li>
                             <strong>Slow Cook:</strong>
-                            Add the marinated mutton and dry spices.
-                            Cook on medium-low heat until tender and the oil separates.
+                            Add the marinated mutton and dry spices. Cook on medium-low heat until tender and the oil separates.
                         </li>
-
                         <li>
                             <strong>Serve:</strong>
                             Serve hot with Fried Rice or Butter Naan.
                         </li>
-
                     </ol>
-
                 </section>
+            </div>
 
+            <section class="recipe-progress-card" aria-labelledby="progress-heading">
+                <h3 id="progress-heading" class="recipe-section-title">Cooking Progress</h3>
+                <p>Current Status: <span class="status-badge status-progress">In Progress</span></p>
+                <progress value="50" max="100" aria-label="Mutton Kosha cooking progress: 50 percent"></progress>
+                <p style="text-align: right; margin-top: 8px; color: var(--text-muted); font-size: 0.9rem;">50% Complete</p>
             </section>
-
-
-            <!-- ==================== COOKING PROGRESS ==================== -->
-
-            <section
-                aria-labelledby="progress-heading"
-                style="margin-top: 30px; padding: 20px; background-color: #f9f9f9; border-radius: 10px; border: 1px solid #ddd;">
-
-                <h3 id="progress-heading"
-                    style="margin: 0 0 12px; color: #d35400;">
-                    Cooking Progress
-                </h3>
-
-                <p style="margin: 0 0 10px; color: #555;">
-                    Current Status: <strong>In Progress</strong>
-                </p>
-
-                <progress
-                    value="50"
-                    max="100"
-                    aria-label="Mutton Kosha cooking progress: 50 percent"
-                    style="width: 100%; height: 24px;">
-                    50%
-                </progress>
-
-                <p style="margin: 8px 0 0; text-align: right; color: #666; font-size: 0.9rem;">
-                    50% Complete
-                </p>
-
-            </section>
-
         </article>
-
     </main>
 
-
-    <!-- ==================== FOOTER ==================== -->
-
-    <footer
-        style="margin-top: 40px; padding: 25px 20px; text-align: center; background-color: #f9f9f9; border-top: 1px solid #ddd;">
-
-        <p style="margin: 0; color: #555;">
-            <small>&copy; 2026 My Recipe Book. All rights reserved.</small>
-        </p>
-
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Recipe Book. All rights reserved.</p>
+        </div>
     </footer>
-
 </body>
-
 </html>
