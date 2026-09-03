@@ -9,7 +9,29 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="container">
+        <!-- Navigation Bar -->
+        <div class="container navbar">
+            <a href="index.html" class="nav-brand">Recipe Book</a>
+
+            <!-- CSS-only Mobile Menu Toggle -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span class="hamburger"></span>
+            </label>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="#featured-recipes" class="nav-link">Recipes</a></li>
+                    <li><a href="#cooking-progress-heading" class="nav-link">Progress</a></li>
+                </ul>
+                <!-- Working CTA Button linked to your phone number -->
+                <a href="tel:+916294131405" class="btn btn-primary">Order Now</a>
+            </nav>
+        </div>
+
+        <!-- Hero Section (Moved below navbar) -->
+        <div class="container hero-section">
             <h1 class="hero-title">Welcome to the Ultimate Recipe Book</h1>
             <p class="hero-subtitle">Discover delicious homemade recipes for every occasion.</p>
         </div>

@@ -1,0 +1,152 @@
+@layer pages {
+    /* Detail Header Back Button */
+    .nav-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-weight: 600;
+        color: var(--primary);
+        transition: transform var(--transition-fast);
+
+        &:hover {
+            transform: translateX(-4px);
+        }
+    }
+
+    /* Detail Hero Area */
+    .recipe-detail-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+
+        .recipe-detail-title {
+            font-size: var(--text-3xl);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.75rem;
+        }
+
+        .recipe-hero-image {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+    }
+
+    /* 2-Column Responsive Body */
+    .recipe-body {
+        display: grid;
+        grid-template-columns: minmax(280px, 1fr) 2fr;
+        gap: clamp(2rem, 4vw, 4rem);
+        align-items: start;
+        margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 860px) {
+        .recipe-body {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .recipe-section-title {
+        font-size: var(--text-xl);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.5rem;
+        color: var(--text-main);
+    }
+
+    /* Sticky Ingredients Sidebar */
+    .ingredients-panel {
+        position: sticky;
+        top: 5.5rem;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+
+        .ingredients-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+
+            li {
+                position: relative;
+                padding-left: 1.6rem;
+                color: var(--text-main);
+
+                &::before {
+                    content: "✓";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: var(--secondary);
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+
+    /* Styled Instructions List with Circular Counter Badges */
+    .instructions-list {
+        list-style: none;
+        counter-reset: step-counter;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 3.8rem;
+            color: var(--text-main);
+
+            &::before {
+                content: counter(step-counter);
+                position: absolute;
+                left: 0;
+                top: -2px;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: var(--radius-full);
+                background-color: var(--primary-subtle);
+                color: var(--primary);
+                font-weight: 800;
+                font-size: var(--text-base);
+                display: grid;
+                place-items: center;
+                border: 1px solid oklch(0.58 0.22 38 / 0.15);
+            }
+
+            strong {
+                display: block;
+                font-size: var(--text-lg);
+                font-weight: 700;
+                margin-bottom: 0.35rem;
+                color: var(--text-main);
+            }
+        }
+    }
+
+    /* Recipe Progress Card */
+    .recipe-progress-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 500;
+        }
+    }
+}
