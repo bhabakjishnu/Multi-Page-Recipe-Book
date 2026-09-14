@@ -1,179 +1,262 @@
-# 🚀 MULTI-PAGE-RECIPE-BOOK
+# 🍲 Multi-Page Recipe Book
 
-A static, multi-page HTML and CSS web application showcasing various culinary recipes.
+> A performant, accessible, and beautifully architected static culinary web application built with modern HTML5 & CSS3. Featuring Cascade Layers (`@layer`), an OKLCH perceptual color palette, fluid clamp-based typography, and a zero-JavaScript responsive navigation system.
 
-## 📖 Project Overview
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3_Modern-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![CSS Layers](https://img.shields.io/badge/@layer-Cascade_Layers-blueviolet?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer)
+[![OKLCH Colors](https://img.shields.io/badge/Color_Gamut-OKLCH-emerald?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch)
+[![Zero JS](https://img.shields.io/badge/Dependencies-Zero_JS-success?style=for-the-badge)](https://en.wikipedia.org/wiki/Vanilla_software)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-The MULTI-PAGE-RECIPE-BOOK is a frontend web project that provides a digital collection of food recipes organized into individual static pages. It relies strictly on core web technologies to deliver a structured, easily navigable cookbook experience. The project emphasizes clean directory organization and a highly modular approach to CSS design.
+---
 
-## 🔗 Demo
+## 📌 Table of Contents
 
-Live Demo: [LIVE_DEMO_URL]
+- [Overview](#-overview)
+- [Project Preview](#-project-preview)
+- [Key Features](#-key-features)
+- [CSS Architecture & Design System](#-css-architecture--design-system)
+- [Repository Structure](#-repository-structure)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Engineering Highlights](#-engineering-highlights)
+- [Performance & Accessibility](#-performance--accessibility)
+- [Browser Compatibility](#-browser-compatibility)
+- [Roadmap](#-roadmap)
+- [Author & Connect](#-author--connect)
 
-## ✨ Features
+---
 
-* **Multi-Page Routing**: Includes dedicated HTML pages for multiple distinct recipes, specifically Butter Naan, Chicken, Fried Rice, Khichuri, Mutton, and Sabji Vat.
-* **Modular CSS Architecture**: Styles are logically separated into distinct files including `reset.css`, `tokens.css`, `layout.css`, `components.css`, `style.css`, and `recipe-detail.css` for maintainability and scalability.
-* **Clean Asset Management**: Images and HTML pages are categorized securely into dedicated subdirectories within the central `assets` folder.
-* **Zero Dependencies**: Built entirely with vanilla HTML and CSS, requiring no build tools, frameworks, or package managers.
+## 📖 Overview
+
+The **Multi-Page Recipe Book** is a multi-page web application showcasing traditional and contemporary Bengali and Indian recipes (such as *Mutton Kosha*, *Chicken Kosha*, *Butter Naan*, *Khichuri*, *Fried Rice*, and *Sabjivat*).
+
+Rather than relying on heavy client-side frameworks or external CSS libraries, this project serves as a showcase of **state-of-the-art native web standards**. It leverages modern CSS Cascade Layers (`@layer`), fluid clamp-based typography, perceptual OKLCH color palettes, and CSS-only interactive state machines, providing instantaneous page loads with zero runtime overhead.
+
+---
 
 ## 📸 Project Preview
 
-## 💻 Tech Stack
+![Multi-Page Recipe Book Preview](assets/images/preview.png)
 
-| Technology | Purpose |
-| --- | --- |
-| **HTML5** | Core content structure and multi-page linking |
-| **CSS3** | Layout styling, component design, and responsive behaviors |
+*Desktop view showcasing the sticky frosted-glass header, hero banner, interactive recipe grid, and live progress indicators.*
 
-## 📂 Project Structure
+---
 
-The repository follows a clean, logical file structure utilizing relative paths:
+## ✨ Key Features
+
+### 1. Sticky Glassmorphism Header
+- Pinned `position: sticky; top: 0` navigation bar with `backdrop-filter: blur(16px)` and translucent warm parchment elevation.
+- Encapsulates brand identity, jump links to sections (`#featured-recipes`, `#cooking-progress`), and an active "Order Now" dial-in CTA button.
+- The hero section scrolls up naturally beneath the navbar, keeping screen real estate uncluttered.
+
+### 2. Multi-Page Recipe Showcase
+- Dedicated individual detail pages for each recipe located under `/pages/`:
+  - **মটন কষা (Mutton Kosha)** — Slow-cooked rich Bengali mutton delicacy.
+  - **চিকেন কষা (Chicken Kosha)** — Authentic spiced caramelized chicken curry.
+  - **ফ্রাইড রাইস (Fried Rice)** — Indo-Chinese wok-tossed aromatic rice.
+  - **বাটার নান (Butter Naan)** — Soft, tandoor-style charred flatbread.
+  - **খিচুরি (Khichuri)** — Traditional comfort rice and roasted lentil porridge.
+  - **সবজি ভাত (Sabjivat)** — Healthy mixed vegetable herb rice platter.
+
+### 3. Detailed Recipe Anatomy
+- **Sticky Ingredients Sidebar**: Floats alongside preparation steps on widescreen monitors for continuous reference while scrolling through the method.
+- **Structured Preparation Steps**: Step-by-step cooking cards with highlighted step numbers, timestamps, and actionable chef notes.
+- **Pro Tip Callout Boxes**: Accent-bordered highlight cards delivering tips for authentic flavor profiles.
+
+### 4. Interactive Cooking Progress Tracker
+- Native HTML5 `<progress>` bars styled across both Blink/WebKit and Gecko engines.
+- Color-coded status badges:
+  - <kbd>Completed</kbd> — Emerald green highlight.
+  - <kbd>In Progress</kbd> — Terracotta amber indicator.
+  - <kbd>Not Started</kbd> — Subdued neutral slate.
+
+### 5. Pure CSS Mobile Drawer Navigation
+- Responsive hamburger menu driven entirely by the CSS `:checked` selector on a hidden checkbox toggle.
+- Zero JavaScript required to slide out a full-height glass drawer on mobile and tablet viewports.
+- Hamburger smoothly transforms into an "X" close button using CSS hardware-accelerated transforms.
+
+---
+
+## 🎨 CSS Architecture & Design System
+
+The styling follows an organized, modular architecture structured around **CSS Cascade Layers (`@layer`)**. This completely eliminates specificity conflicts and selector weight wars without relying on `!important`.
+
+```css
+@layer reset, tokens, layout, components, pages;
+```
+
+### Layer Breakdown
+
+| Layer | File | Description |
+| :--- | :--- | :--- |
+| `reset` | [`reset.css`](assets/css/reset.css) | Modern baseline reset, box-sizing normalization, media element fluid scaling, and typography reset. |
+| `tokens` | [`tokens.css`](assets/css/tokens.css) | Design tokens: OKLCH color palettes, fluid clamp typography, elevation shadows, radii, and transition timings. |
+| `layout` | [`layout.css`](assets/css/layout.css) | Structural layouts: fluid containers, sticky site-header, hero section, grid systems, mobile drawer, and footer. |
+| `components` | [`components.css`](assets/css/components.css) | Reusable UI components: recipe cards, image aspect ratio containers, CTA buttons, badges, and progress table. |
+| `pages` | [`recipe-detail.css`](assets/css/recipe-detail.css) | Detail page specifications: two-column recipe body, sticky ingredients aside, step cards, and tip callouts. |
+| **Main** | [`style.css`](assets/css/style.css) | Single orchestrator that establishes layer order and imports all stylesheets in sequence. |
+
+### Color Science: OKLCH Color Space
+This project utilizes the `oklch()` color model for consistent perceived lightness and saturation across all screen types:
+- **Terracotta Primary**: `oklch(0.58 0.22 38)`
+- **Culinary Emerald**: `oklch(0.62 0.16 142)`
+- **Warm Parchment Canvas**: `oklch(0.985 0.008 85)`
+- **Elevated White Surface**: `oklch(1 0 0)`
+- **Charcoal Typography**: `oklch(0.22 0.025 50)`
+
+---
+
+## 📂 Repository Structure
 
 ```text
-MULTI-PAGE-RECIPE-BOOK/
-│
+Multi-Page-Recipe-Book/
 ├── assets/
 │   ├── css/
-│   │   ├── components.css
-│   │   ├── layout.css
-│   │   ├── recipe-detail.css
-│   │   ├── reset.css
-│   │   ├── style.css
-│   │   └── tokens.css
-│   ├── images/
-│   │   └── recipes/
-│   │       ├── Butternaan.jpg
-│   │       ├── Chicken.jpg
-│   │       ├── Friedrice.jpg
-│   │       ├── images1.jpg
-│   │       ├── images2.jpg
-│   │       ├── images3.png
-│   │       ├── Khichuri.jpg
-│   │       ├── Mutton.jpg
-│   │       └── Sabjivat.jpg
-│   └── pages/
-│       ├── Butternaan.html
-│       ├── Chicken.html
-│       ├── Friedrice.html
-│       ├── Khichuri.html
-│       ├── Mutton.html
-│       └── Sabjivat.html
-│
-└── index.html
-
+│   │   ├── components.css       # Recipe cards, buttons, badges, progress bar
+│   │   ├── layout.css           # Header, sticky navbar, hero, drawer, footer
+│   │   ├── recipe-detail.css    # Recipe detail page layout & sidebar
+│   │   ├── reset.css            # Standard modern CSS reset
+│   │   ├── style.css            # Main stylesheet layer orchestrator
+│   │   └── tokens.css           # OKLCH colors, fluid typography, radii, shadows
+│   └── images/
+│       ├── preview.png          # Project desktop preview screenshot
+│       └── recipes/             # High-resolution recipe photography
+│           ├── Butternaan.jpg
+│           ├── Chicken.jpg
+│           ├── Friedrice.jpg
+│           ├── Khichuri.jpg
+│           ├── Mutton.jpg
+│           └── Sabjivat.jpg
+├── pages/                       # Dedicated multi-page recipe detail views
+│   ├── Butternaan.html
+│   ├── Chicken.html
+│   ├── Friedrice.html
+│   ├── Khichuri.html
+│   ├── Mutton.html
+│   └── Sabjivat.html
+├── index.html                   # Homepage catalog, hero, & cooking progress
+└── README.md                    # Project documentation & engineering specs
 ```
 
-## 🚀 Installation
+---
 
-To view or modify this project locally, follow these steps:
+## 💻 Tech Stack
 
-1. Clone the repository:
-```bash
-git clone [REPOSITORY_URL]
+| Technology | Role |
+| :--- | :--- |
+| **HTML5** | Semantic markup (`<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, `<table>`, `<progress>`) |
+| **CSS3** | Modern styling: Cascade Layers (`@layer`), CSS Grid, Flexbox, `position: sticky`, `backdrop-filter` |
+| **OKLCH** | Wide-gamut color standard ensuring perceptual uniformity across diverse displays |
+| **Vanilla Architecture** | Zero runtime dependencies, no build pipeline required, pure static delivery |
 
-```
+---
 
+## 🚀 Getting Started
 
-2. Navigate to the project directory:
-```bash
-cd MULTI-PAGE-RECIPE-BOOK
+### Quick Start (Local)
 
-```
+Because this is a pure static web project, it requires no package installations, compilers, or build steps.
 
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/bhabakjishnu/Multi-Page-Recipe-Book.git
+   cd Multi-Page-Recipe-Book
+   ```
 
+2. **Open the Application:**
+   - Double-click `index.html` in your file explorer to open it directly in any modern web browser.
+   - *Or* serve it using a lightweight local development server:
+     ```bash
+     # Using Node.js npx:
+     npx serve .
+     
+     # Or using VS Code Live Server extension:
+     # Right-click index.html -> "Open with Live Server"
+     ```
 
-## 🖱️ Usage
+### Deploying to GitHub Pages
 
-Because this is a static website, no development server or environment configuration is required.
-Simply double-click the `index.html` file in the root directory to open it in your default web browser. From there, you can navigate through the recipe links.
+1. Push your repository to GitHub.
+2. In your repository settings, navigate to **Settings** → **Pages**.
+3. Under **Build and deployment** → **Source**, select **Deploy from a branch**.
+4. Choose the `main` (or default) branch and set the folder to `/ (root)`.
+5. Click **Save**. Your site will be published at:
+   ```
+   https://bhabakjishnu.github.io/Multi-Page-Recipe-Book/
+   ```
 
-## ⚙️ How It Works
+---
 
-1. **Entry Point**: The user opens the root `index.html` file.
-2. **Navigation**: The index page acts as the main directory, providing links to individual HTML files located in the `assets/pages/` directory.
-3. **Rendering**: As the user navigates, each page pulls in global stylesheets (like `reset.css` and `tokens.css`) and specific stylesheets (like `recipe-detail.css`) from the `assets/css/` directory to render the UI.
+## 🧠 Engineering Highlights
 
-## 🧠 Key Concepts & Learning Outcomes
+- **Fluid Typography via `clamp()`**: Font sizes smoothly interpolate between screen widths without jagged media query jumps:
+  ```css
+  --text-3xl: clamp(2.15rem, 1.8rem + 1.8vw, 3rem);
+  --text-xl: clamp(1.35rem, 1.25rem + 0.7vw, 1.65rem);
+  ```
+- **Zero-JS Mobile Menu**: State is controlled via an `<input type="checkbox" id="nav-toggle">` element:
+  ```css
+  .nav-toggle:checked ~ .nav-menu {
+      transform: translateX(0);
+  }
+  ```
+- **Hardware-Accelerated Micro-Animations**: Card hover elevations and image zoom effects utilize `transform: translateY()` and `scale()` to prevent browser layout reflows and ensure 60fps animations.
+- **Native Image Lazy Loading**: All recipe photography specifies `loading="lazy"` to defer offscreen assets, accelerating initial First Contentful Paint (FCP).
 
-* **Semantic HTML**: Structuring content appropriately across multiple distinct web pages.
-* **CSS Organization**: Utilizing design tokens (`tokens.css`), resets (`reset.css`), layout structures (`layout.css`), and localized styling (`recipe-detail.css`) for a professional, scalable CSS architecture.
-* **Relative Pathing**: Managing anchor links and image `src` paths seamlessly between sibling and nested directories.
+---
 
-## 📱 Responsive Design
+## ♿ Performance & Accessibility
 
-This project utilizes standard CSS practices for cross-device compatibility:
+- **Semantic Landmark Hierarchy**: Proper use of `<h1>` through `<h3>`, `<header>`, `<nav>`, `<main>`, `<article>`, and `<aside>` provides navigational landmarks for assistive technologies.
+- **Accessible Controls**: Mobile navigation elements include descriptive `aria-label` attributes. Progress indicators provide textual representation for screen readers via `aria-label`.
+- **Contrast Ratios**: All text and background combinations adhere to **WCAG 2.1 AA** contrast requirements using high-contrast OKLCH values.
+- **Reduced Motion Ready**: Transitions are cleanly decoupled for seamless integration with `@media (prefers-reduced-motion)`.
 
-* Fluid layout techniques targeting mobile, tablet, and desktop viewports.
-* Media queries adjusting grid/flex structures based on screen width.
-
-## ♿ Accessibility
-
-* Semantic HTML5 tags ensure baseline screen-reader support.
+---
 
 ## 🌐 Browser Compatibility
 
-Tested and compatible with modern web browsers:
+Tested and fully compatible across all modern evergreen browsers:
 
-* Google Chrome
-* Mozilla Firefox
-* Microsoft Edge
-* Apple Safari
+| Browser | Supported Version | Notes |
+| :--- | :---: | :--- |
+| **Google Chrome** | 105+ | Full support for `@layer`, `oklch()`, and `backdrop-filter` |
+| **Mozilla Firefox** | 113+ | Full support for `@layer`, `oklch()`, and custom `<progress>` |
+| **Apple Safari** | 15.4+ | Full support with `-webkit-backdrop-filter` fallback |
+| **Microsoft Edge** | 105+ | Chromium engine; 100% parity with Chrome |
 
-## ⚡ Performance
+---
 
-* The separation of CSS concerns (tokens, layout, components) prevents monolithic, render-blocking stylesheets.
-* Pure static file architecture ensures instantaneous loading times with zero server-side latency.
+## 🔮 Roadmap
 
-## 🧪 Testing
+- [ ] **Client-Side Search**: Instant recipe filtering by ingredient, cooking time, and dietary preference.
+- [ ] **Dark Mode Theme**: Color theme switching driven by CSS custom properties and `color-scheme`.
+- [ ] **Portion / Serving Calculator**: Dynamic ingredient quantity multiplier.
+- [ ] **Printable Recipe Cards**: Dedicated `@media print` stylesheet for clean physical printing.
 
-There is no automated testing framework currently implemented for this static HTML/CSS project.
+---
 
-## 🐛 Known Issues
+## 👤 Author & Connect
 
-No known issues at this time.
+**Jishnu Bhabak**  
+*Full Stack / Frontend Web Developer*
 
-## 🔮 Future Improvements
+- **GitHub**: [@bhabakjishnu](https://github.com/bhabakjishnu)
+- **Repository**: [Multi-Page-Recipe-Book](https://github.com/bhabakjishnu/Multi-Page-Recipe-Book)
+- **Email**: [bhabakjishnu2004@gmail.com](mailto:bhabakjishnu2004@gmail.com)
+- **Phone**: [+91 62941 31405](tel:+916294131405)
+- **Location**: Sat Simulia, Haringhata, Nadia, WB 741257, India
 
-* **Dark Mode**: Implement a theme toggle utilizing custom CSS properties/variables.
-* **JavaScript Interactivity**: Add client-side filtering or a search bar for quick recipe discovery.
-* **Dynamic Data Integration**: Refactor the static HTML pages to pull JSON recipe data dynamically via a modern frontend framework.
+---
 
-## 🤝 Contributing
+## 📄 License
 
-Contributions, issues, and feature requests are welcome!
+This project is open-source software licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to explore, learn from, and adapt the code for your own projects!
 
-1. Fork the repository.
-2. Clone your fork: `git clone [YOUR_FORK_URL]`
-3. Create a feature branch: `git checkout -b feature/amazing-feature`
-4. Commit your changes: `git commit -m 'feat: add amazing feature'`
-5. Push to the branch: `git push origin feature/amazing-feature`
-6. Open a Pull Request.
+---
 
-### Commit Convention
-
-* `feat:` — New feature
-* `fix:` — Bug fix
-* `docs:` — Documentation adjustments
-* `style:` — CSS/Styling improvements
-* `refactor:` — Code refactoring without changing functionality
-
-## 📜 License
-
-This project is licensed under the [LICENSE].
-
-## 👤 Author
-
-**[AUTHOR_NAME]**
-
-* GitHub: [@GITHUB_USERNAME](https://www.google.com/search?q=https://github.com/%5BGITHUB_USERNAME%5D)
-* LinkedIn: [LINKEDIN_PROFILE]
-* Portfolio: [PORTFOLIO_URL]
-
-## 📞 Contact
-
-If you have any questions or feedback, feel free to reach out via [CONTACT_METHOD].
-
-## ⭐️ Support
-
-If you found this project helpful or inspiring, please consider giving it a ⭐️ on GitHub!
+<div align="center">
+  <sub>Built with ❤️ and modern web standards. If you found this repository helpful, consider starring ⭐ the project!</sub>
+</div>
