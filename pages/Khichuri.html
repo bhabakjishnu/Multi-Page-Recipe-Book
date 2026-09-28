@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Traditional Bengali Khichuri recipe with ingredients, cooking instructions and progress status.">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <title>Khichuri - My Recipe Book</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-            <h1 class="hero-title">My Recipe Book</h1>
+            <h1 class="hero-title"><i data-lucide="chef-hat"></i> My Recipe Book</h1>
             <nav aria-label="Main navigation">
-                <a href="../index.html" class="nav-back">&larr; Back to Home</a>
+                <a href="../index.html" class="nav-back"><i data-lucide="arrow-left"></i> Back to Home</a>
             </nav>
         </div>
     </header>
@@ -26,7 +27,7 @@
 
             <div class="recipe-body">
                 <aside class="ingredients-panel" aria-labelledby="ingredients-heading">
-                    <h3 id="ingredients-heading" class="recipe-section-title">Ingredients</h3>
+                    <h3 id="ingredients-heading" class="recipe-section-title"><i data-lucide="shopping-basket"></i> Ingredients</h3>
                     <ul class="ingredients-list">
                         <li>1 cup Gobindobhog Rice</li>
                         <li>1 cup Roasted Moong Dal</li>
@@ -38,7 +39,7 @@
                 </aside>
 
                 <section aria-labelledby="instructions-heading">
-                    <h3 id="instructions-heading" class="recipe-section-title">Instructions</h3>
+                    <h3 id="instructions-heading" class="recipe-section-title"><i data-lucide="chef-hat"></i> Instructions</h3>
                     <ol class="instructions-list">
                         <li>
                             <strong>Prep:</strong> Dry roast the moong dal until fragrant. Wash rice and dal together. Lightly fry potatoes and cauliflower.
@@ -60,18 +61,22 @@
             </div>
 
             <section class="recipe-progress-card" aria-labelledby="progress-heading">
-                <h3 id="progress-heading" class="recipe-section-title">Cooking Progress</h3>
-                <p>Current Status: <span class="status-badge status-completed">Completed</span></p>
+                <h3 id="progress-heading" class="recipe-section-title"><i data-lucide="timer"></i> Cooking Progress</h3>
+                <p>Current Status: <span class="status-badge status-completed"><i data-lucide="check-circle-2"></i> Completed</span></p>
                 <progress value="100" max="100" aria-label="Khichuri cooking progress: 100 percent"></progress>
-                <p style="text-align: right; margin-top: 8px; color: var(--secondary-color); font-size: 0.9rem;">100% Complete</p>
+                <p style="text-align: right; margin-top: 8px; color: var(--secondary); font-size: 0.9rem;">100% Complete</p>
             </section>
         </article>
     </main>
 
     <footer class="site-footer">
         <div class="footer-bottom">
-            <p>&copy; 2026 My Recipe Book. All rights reserved.</p>
+            <p>&copy; 2026 My Recipe Book. Crafted with <i data-lucide="heart" class="icon-heart"></i> for food lovers.</p>
         </div>
     </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
