@@ -33,7 +33,14 @@
         color: var(--text-main);
         background-color: var(--bg-canvas);
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-optical-sizing: auto;
         overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        text-wrap: balance;
     }
 
     img, picture, svg {

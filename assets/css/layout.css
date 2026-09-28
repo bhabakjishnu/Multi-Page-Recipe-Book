@@ -31,6 +31,7 @@
             padding-block: 1.1rem;
 
             .hero-title {
+                font-family: var(--font-heading);
                 font-size: var(--text-xl);
                 font-weight: 800;
                 color: var(--primary);
@@ -50,6 +51,7 @@
     }
 
     .nav-brand {
+        font-family: var(--font-heading);
         font-size: var(--text-xl);
         font-weight: 800;
         letter-spacing: -0.02em;
@@ -229,6 +231,7 @@
     }
 
     .hero-badge {
+        font-family: var(--font-heading);
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
@@ -251,6 +254,7 @@
     }
 
     .hero-title {
+        font-family: var(--font-heading);
         font-size: var(--text-3xl);
         font-weight: 800;
         letter-spacing: -0.035em;
@@ -281,6 +285,7 @@
         }
 
         .footer-title {
+            font-family: var(--font-heading);
             font-size: var(--text-lg);
             font-weight: 700;
             color: oklch(0.99 0 0);
