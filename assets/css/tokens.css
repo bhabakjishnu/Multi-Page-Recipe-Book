@@ -1,30 +1,39 @@
 @layer tokens {
     :root {
-        /* OKLCH Culinary Color Palette */
-        --primary: oklch(0.58 0.22 38);               /* Vibrant saffron terracotta */
-        --primary-hover: oklch(0.51 0.23 38);
-        --primary-subtle: oklch(0.96 0.035 45);
-        --secondary: oklch(0.62 0.16 142);            /* Fresh culinary herb emerald */
+        /* Core 4-Color Culinary Palette */
+        --palette-sand: #FFEDCE;                      /* Light Cream / Soft Sand */
+        --palette-peach: #FFC193;                     /* Peach / Warm Amber */
+        --palette-coral: #FF8383;                     /* Coral / Soft Rose */
+        --palette-crimson: #FF3737;                   /* Crimson / Vibrant Coral Red */
+
+        /* Semantic Brand & Accent Mappings */
+        --primary: var(--palette-crimson);            /* #FF3737 - Vibrant hero crimson */
+        --primary-hover: #E02626;                     /* Deep focused crimson */
+        --primary-subtle: rgba(255, 193, 147, 0.25);  /* Warm peach-sand tint */
+        --secondary: var(--palette-coral);            /* #FF8383 - Warm coral accent */
+        --secondary-hover: #F26F6F;
+        --accent-peach: var(--palette-peach);         /* #FFC193 - Warm amber peach */
+        --accent-sand: var(--palette-sand);           /* #FFEDCE - Light cream soft sand */
         
         /* Surface & Neutral Scale */
-        --bg-canvas: oklch(0.985 0.008 85);           /* Warm parchment canvas */
-        --bg-surface: oklch(1 0 0);                   /* Pure white card surface */
-        --bg-surface-elevated: oklch(0.995 0.003 85);
-        --border-subtle: oklch(0.92 0.01 75);
-        --border-strong: oklch(0.82 0.02 75);
+        --bg-canvas: var(--palette-sand);             /* #FFEDCE - Warm culinary sand canvas */
+        --bg-surface: #FFFFFF;                        /* Crisp white card surface */
+        --bg-surface-elevated: #FFFDFC;               /* Slightly elevated surface */
+        --border-subtle: rgba(255, 193, 147, 0.45);   /* Delicate peach-tinted border */
+        --border-strong: var(--palette-peach);        /* #FFC193 - Warm peach border */
 
-        /* Typography Colors */
-        --text-main: oklch(0.22 0.025 50);            /* Deep warm charcoal */
-        --text-muted: oklch(0.48 0.025 55);           /* Balanced slate gray */
-        --text-inverse: oklch(0.99 0 0);
+        /* Typography Colors (High contrast WCAG AAA warm tones) */
+        --text-main: #2A1713;                         /* Rich deep roasted espresso */
+        --text-muted: #73534B;                        /* Warm mocha slate */
+        --text-inverse: #FFFFFF;                      /* Pure white text on vibrant surfaces */
 
-        /* Status Colors */
-        --status-progress-bg: oklch(0.95 0.08 75);
-        --status-progress-text: oklch(0.48 0.15 65);
-        --status-completed-bg: oklch(0.94 0.08 145);
-        --status-completed-text: oklch(0.40 0.14 145);
-        --status-not-started-bg: oklch(0.93 0.01 260);
-        --status-not-started-text: oklch(0.45 0.02 260);
+        /* Status Colors (Harmonized with 4-color palette) */
+        --status-progress-bg: rgba(255, 193, 147, 0.35);    /* Peach tint */
+        --status-progress-text: #9E430B;                     /* Warm roasted amber (accessible) */
+        --status-completed-bg: rgba(255, 55, 55, 0.12);     /* Crimson tint */
+        --status-completed-text: #D61F1F;                    /* Vibrant deep crimson (accessible) */
+        --status-not-started-bg: rgba(255, 237, 206, 0.85); /* Sand cream tint */
+        --status-not-started-text: #695246;                  /* Muted warm slate (accessible) */
 
         /* Fluid Typography (clamp-based scale) */
         --font-sans: "Poppins", "Noto Sans Bengali", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -38,15 +47,15 @@
         --text-2xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.25rem);
         --text-3xl: clamp(2.15rem, 1.8rem + 1.8vw, 3rem);
 
-        /* Elevation & Geometry */
+        /* Elevation & Geometry (Warm-tinted ambient shadows) */
         --radius-sm: 8px;
         --radius-md: 14px;
         --radius-lg: 22px;
         --radius-full: 9999px;
 
-        --shadow-sm: 0 2px 8px -2px oklch(0.2 0.02 50 / 0.05);
-        --shadow-md: 0 10px 25px -5px oklch(0.2 0.02 50 / 0.08), 0 4px 10px -4px oklch(0.2 0.02 50 / 0.04);
-        --shadow-lg: 0 22px 45px -12px oklch(0.2 0.02 50 / 0.12), 0 6px 16px -4px oklch(0.2 0.02 50 / 0.06);
+        --shadow-sm: 0 2px 8px -2px rgba(42, 23, 19, 0.06);
+        --shadow-md: 0 10px 25px -5px rgba(42, 23, 19, 0.08), 0 4px 10px -4px rgba(255, 55, 55, 0.04);
+        --shadow-lg: 0 22px 45px -12px rgba(42, 23, 19, 0.12), 0 6px 16px -4px rgba(255, 55, 55, 0.06);
 
         /* Fluid Spacing & Transitions */
         --container-max: 1200px;

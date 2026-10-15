@@ -1,11 +1,11 @@
 # 🍲 Multi-Page Recipe Book
 
-> A performant, accessible, and beautifully architected static culinary web application built with modern HTML5 & CSS3. Featuring Cascade Layers (`@layer`), an OKLCH perceptual color palette, fluid clamp-based typography, and a zero-JavaScript responsive navigation system.
+> A performant, accessible, and beautifully architected static culinary web application built with modern HTML5 & CSS3. Featuring Cascade Layers (`@layer`), a curated 4-color warm culinary palette, fluid clamp-based typography, and a zero-JavaScript responsive navigation system.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3_Modern-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![CSS Layers](https://img.shields.io/badge/@layer-Cascade_Layers-blueviolet?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer)
-[![OKLCH Colors](https://img.shields.io/badge/Color_Gamut-OKLCH-emerald?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklch)
+[![Color Palette](https://img.shields.io/badge/Theme-4--Color_Warm_Palette-FF3737?style=for-the-badge)](assets/css/tokens.css)
 [![Zero JS](https://img.shields.io/badge/Dependencies-Zero_JS-success?style=for-the-badge)](https://en.wikipedia.org/wiki/Vanilla_software)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
@@ -92,19 +92,18 @@ The styling follows an organized, modular architecture structured around **CSS C
 | Layer | File | Description |
 | :--- | :--- | :--- |
 | `reset` | [`reset.css`](assets/css/reset.css) | Modern baseline reset, box-sizing normalization, media element fluid scaling, and typography reset. |
-| `tokens` | [`tokens.css`](assets/css/tokens.css) | Design tokens: OKLCH color palettes, fluid clamp typography, elevation shadows, radii, and transition timings. |
+| `tokens` | [`tokens.css`](assets/css/tokens.css) | Design tokens: 4-color palette, fluid clamp typography, elevation shadows, radii, and transition timings. |
 | `layout` | [`layout.css`](assets/css/layout.css) | Structural layouts: fluid containers, sticky site-header, hero section, grid systems, mobile drawer, and footer. |
 | `components` | [`components.css`](assets/css/components.css) | Reusable UI components: recipe cards, image aspect ratio containers, CTA buttons, badges, and progress table. |
 | `pages` | [`recipe-detail.css`](assets/css/recipe-detail.css) | Detail page specifications: two-column recipe body, sticky ingredients aside, step cards, and tip callouts. |
 | **Main** | [`style.css`](assets/css/style.css) | Single orchestrator that establishes layer order and imports all stylesheets in sequence. |
 
-### Color Science: OKLCH Color Space
-This project utilizes the `oklch()` color model for consistent perceived lightness and saturation across all screen types:
-- **Terracotta Primary**: `oklch(0.58 0.22 38)`
-- **Culinary Emerald**: `oklch(0.62 0.16 142)`
-- **Warm Parchment Canvas**: `oklch(0.985 0.008 85)`
-- **Elevated White Surface**: `oklch(1 0 0)`
-- **Charcoal Typography**: `oklch(0.22 0.025 50)`
+### Color Science: Curated 4-Color Culinary Palette
+This project is styled with a tailored, high-contrast, warm culinary 4-color palette:
+- **`#FFEDCE` (Light Cream / Soft Sand)**: Canvas background (`--bg-canvas`), frosted glass backdrop, table header tints, and delicate surfaces.
+- **`#FFC193` (Peach / Warm Amber)**: Secondary accents, borders (`--border-strong`), badge backgrounds, and warm indicator glows.
+- **`#FF8383` (Coral / Soft Rose)**: Secondary highlights (`--secondary`), active elements, icons, and progress gradients.
+- **`#FF3737` (Crimson / Vibrant Coral Red)**: Primary brand identity (`--primary`), call-to-action buttons, active navigation, and focus outlines.
 
 ---
 
@@ -119,7 +118,7 @@ Multi-Page-Recipe-Book/
 │   │   ├── recipe-detail.css    # Recipe detail page layout & sidebar
 │   │   ├── reset.css            # Standard modern CSS reset
 │   │   ├── style.css            # Main stylesheet layer orchestrator
-│   │   └── tokens.css           # OKLCH colors, fluid typography, radii, shadows
+│   │   └── tokens.css           # 4-color palette tokens, fluid typography, radii, shadows
 │   └── images/
 │       ├── preview.png          # Project desktop preview screenshot
 │       └── recipes/             # High-resolution recipe photography
@@ -148,7 +147,7 @@ Multi-Page-Recipe-Book/
 | :--- | :--- |
 | **HTML5** | Semantic markup (`<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, `<table>`, `<progress>`) |
 | **CSS3** | Modern styling: Cascade Layers (`@layer`), CSS Grid, Flexbox, `position: sticky`, `backdrop-filter` |
-| **OKLCH** | Wide-gamut color standard ensuring perceptual uniformity across diverse displays |
+| **Color Theme** | Curated 4-color warm culinary palette (#FFEDCE, #FFC193, #FF8383, #FF3737) |
 | **Vanilla Architecture** | Zero runtime dependencies, no build pipeline required, pure static delivery |
 
 ---
