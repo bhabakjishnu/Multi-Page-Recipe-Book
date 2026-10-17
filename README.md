@@ -246,9 +246,6 @@ Tested and fully compatible across all modern evergreen browsers:
 
 - **GitHub**: [@bhabakjishnu](https://github.com/bhabakjishnu)
 - **Repository**: [Multi-Page-Recipe-Book](https://github.com/bhabakjishnu/Multi-Page-Recipe-Book)
-- **Email**: [bhabakjishnu2004@gmail.com](mailto:bhabakjishnu2004@gmail.com)
-- **Phone**: [+91 62941 31405](tel:+916294131405)
-- **Location**: Sat Simulia, Haringhata, Nadia, WB 741257, India
 
 ---
 
