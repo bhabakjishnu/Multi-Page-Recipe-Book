@@ -38,7 +38,9 @@ Rather than relying on heavy client-side frameworks or external CSS libraries, t
 
 ## 📸 Project Preview
 
-![Multi-Page Recipe Book Preview](assets/images/preview.png)
+<p align="center">
+  <img src="./assets/desktop-preview.png" alt="Desktop Preview" width="100%">
+</p>
 
 *Desktop view showcasing the sticky frosted-glass header, hero banner, interactive recipe grid, and live progress indicators.*
 
