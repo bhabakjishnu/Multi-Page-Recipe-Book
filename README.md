@@ -16,6 +16,7 @@
 - [Overview](#-overview)
 - [Project Preview](#-project-preview)
 - [Key Features](#-key-features)
+- [System Architecture](#-system-architecture)
 - [CSS Architecture & Design System](#-css-architecture--design-system)
 - [Repository Structure](#-repository-structure)
 - [Tech Stack](#-tech-stack)
@@ -78,6 +79,83 @@ Rather than relying on heavy client-side frameworks or external CSS libraries, t
 - Responsive hamburger menu driven entirely by the CSS `:checked` selector on a hidden checkbox toggle.
 - Zero JavaScript required to slide out a full-height glass drawer on mobile and tablet viewports.
 - Hamburger smoothly transforms into an "X" close button using CSS hardware-accelerated transforms.
+
+---
+
+## 🏗️ System Architecture
+
+The **Multi-Page Recipe Book** is engineered on a resilient, zero-runtime static architecture. It prioritizes instantaneous first paint metrics, complete isolation of concerns via CSS Cascade Layers, and zero client-side JavaScript dependencies.
+
+### Architecture Overview
+
+```mermaid
+flowchart TB
+    subgraph ClientTier["🖥️ Client Tier (Browser Runtime)"]
+        direction LR
+        Desktop["Desktop Browsers"]
+        Mobile["Mobile / Tablet Viewports"]
+    end
+
+    subgraph DocumentTier["📄 Multi-Page Document Layer (HTML5)"]
+        Index["index.html<br/>(Catalog Hub, Hero & Cooking Progress)"]
+        
+        subgraph DetailPages["Recipe Detail Pages (/pages/)"]
+            Mutton["Mutton.html"]
+            Chicken["Chicken.html"]
+            FriedRice["Friedrice.html"]
+            ButterNaan["Butternaan.html"]
+            Khichuri["Khichuri.html"]
+            Sabjivat["Sabjivat.html"]
+        end
+    end
+
+    subgraph StyleEngine["🎨 CSS Cascade Engine (assets/css/style.css)"]
+        direction TB
+        L1["@layer reset<br/>Box model baseline & typography normalization"]
+        L2["@layer tokens<br/>4-color palette, clamp typography & elevations"]
+        L3["@layer layout<br/>Sticky glassmorphism header, hero & grid layouts"]
+        L4["@layer components<br/>Recipe cards, progress bars, CTA buttons & badges"]
+        L5["@layer pages<br/>Sticky aside ingredients, cooking steps & tips"]
+
+        L1 --> L2 --> L3 --> L4 --> L5
+    end
+
+    subgraph StateTier["⚡ Zero-JS Interaction & State Machine"]
+        NavToggle["Pure CSS Checkbox Hack<br/>(:checked pseudo-class drawer)"]
+        Animations["Hardware-Accelerated Transforms<br/>(translateY, scale, 60fps transitions)"]
+        FluidLayout["Fluid Clamp Engine<br/>(Smooth viewport interpolation)"]
+    end
+
+    subgraph AssetTier["📦 Static Asset & Media Tier"]
+        Images["High-Res Recipe Imagery (/assets/images/recipes/)<br/>(Native loading='lazy')"]
+        Palette["4-Color Warm Culinary Theme System"]
+    end
+
+    ClientTier -->|"Direct Navigation & Route Selection"| DocumentTier
+    Index <-->|"Hub-and-Spoke Navigation"| DetailPages
+    DocumentTier -->|"Orchestrated By"| StyleEngine
+    DocumentTier -->|"Executes via CSS"| StateTier
+    DocumentTier -->|"Fetches on Demand"| AssetTier
+    StyleEngine -.->|"Encapsulates"| Palette
+```
+
+### Core Architecture Pillars
+
+1. **Hub-and-Spoke Document Routing**:
+   - **Central Catalog (`index.html`)**: Acts as the application portal, delivering hero branding, the recipe showcase grid, and the live interactive cooking progress dashboard.
+   - **Dedicated Recipe Detail Pages (`/pages/*.html`)**: Individual isolated HTML documents structured with semantic landmarks (`<article>`, `<aside>`, `<section>`), providing two-column desktop layouts with sticky ingredient sidebars.
+
+2. **Cascade Layer Styling Engine (`@layer`)**:
+   - `style.css` acts as the single master layer orchestrator, establishing an immutable priority hierarchy: `reset → tokens → layout → components → pages`.
+   - CSS specificity wars and `!important` declarations are eliminated by design.
+
+3. **Zero-JavaScript Reactive State Machine**:
+   - Interactive components—such as the full-height mobile slide-out drawer menu—are driven entirely by native HTML/CSS states (e.g., hidden `<input type="checkbox">` coupled with the CSS `:checked ~ .nav-menu` selector).
+   - High-performance UI micro-interactions (card hovers, button transforms, image zoom) utilize GPU-accelerated CSS transforms (`translateY`, `scale`) for silky smooth 60fps rendering without layout recalculations.
+
+4. **Asset & Performance Strategy**:
+   - **Native Lazy Loading**: Images offscreen utilize browser-level `loading="lazy"`.
+   - **Zero Build Pipelines**: Fully deployable directly to any static web server (GitHub Pages, Cloudflare Pages, Netlify, Nginx, Apache) without node runtimes or bundlers.
 
 ---
 
