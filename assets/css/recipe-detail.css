@@ -59,6 +59,11 @@
         .recipe-body {
             grid-template-columns: 1fr;
         }
+
+        .ingredients-panel {
+            position: static;
+            top: auto;
+        }
     }
 
     .recipe-section-title {
@@ -79,15 +84,19 @@
         }
     }
 
-    /* Sticky Ingredients Sidebar */
+    /* Ingredients Sidebar (Sticky on desktop viewports only) */
     .ingredients-panel {
-        position: sticky;
-        top: 5.5rem;
         background: var(--bg-surface);
         border: 1px solid var(--border-subtle);
         border-radius: var(--radius-md);
         padding: 2rem;
         box-shadow: var(--shadow-sm);
+
+        @media (min-width: 861px) {
+            position: sticky;
+            top: 5.5rem;
+            z-index: 10;
+        }
 
         .ingredients-list {
             list-style: none;
