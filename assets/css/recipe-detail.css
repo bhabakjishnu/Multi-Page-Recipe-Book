@@ -150,7 +150,7 @@
                 font-size: var(--text-base);
                 display: grid;
                 place-items: center;
-                border: 1px solid rgba(255, 55, 55, 0.2);
+                border: 1px solid rgba(120, 0, 0, 0.2);
             }
 
             strong {

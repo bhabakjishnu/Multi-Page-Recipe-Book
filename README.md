@@ -172,18 +172,19 @@ The styling follows an organized, modular architecture structured around **CSS C
 | Layer | File | Description |
 | :--- | :--- | :--- |
 | `reset` | [`reset.css`](assets/css/reset.css) | Modern baseline reset, box-sizing normalization, media element fluid scaling, and typography reset. |
-| `tokens` | [`tokens.css`](assets/css/tokens.css) | Design tokens: 4-color palette, fluid clamp typography, elevation shadows, radii, and transition timings. |
+| `tokens` | [`tokens.css`](assets/css/tokens.css) | Design tokens: 5-color palette, fluid clamp typography, elevation shadows, radii, and transition timings. |
 | `layout` | [`layout.css`](assets/css/layout.css) | Structural layouts: fluid containers, sticky site-header, hero section, grid systems, mobile drawer, and footer. |
 | `components` | [`components.css`](assets/css/components.css) | Reusable UI components: recipe cards, image aspect ratio containers, CTA buttons, badges, and progress table. |
 | `pages` | [`recipe-detail.css`](assets/css/recipe-detail.css) | Detail page specifications: two-column recipe body, sticky ingredients aside, step cards, and tip callouts. |
 | **Main** | [`style.css`](assets/css/style.css) | Single orchestrator that establishes layer order and imports all stylesheets in sequence. |
 
-### Color Science: Curated 4-Color Culinary Palette
-This project is styled with a tailored, high-contrast, warm culinary 4-color palette:
-- **`#FFEDCE` (Light Cream / Soft Sand)**: Canvas background (`--bg-canvas`), frosted glass backdrop, table header tints, and delicate surfaces.
-- **`#FFC193` (Peach / Warm Amber)**: Secondary accents, borders (`--border-strong`), badge backgrounds, and warm indicator glows.
-- **`#FF8383` (Coral / Soft Rose)**: Secondary highlights (`--secondary`), active elements, icons, and progress gradients.
-- **`#FF3737` (Crimson / Vibrant Coral Red)**: Primary brand identity (`--primary`), call-to-action buttons, active navigation, and focus outlines.
+### Color Science: Curated 5-Color Palette
+This project is styled with a tailored, high-contrast, accessible 5-color palette (detailed in [`implementation.md`](implementation.md)):
+- **`#fdf0d5` (Background / Light Cream)**: Canvas background (`--bg-canvas`), frosted glass backdrop, table header tints, and delicate surfaces.
+- **`#003049` (Deep Blue / Dark Neutral)**: Primary typography (`--text-main`), headings, deep blue footer canvas (`.site-footer`), and structural anchor.
+- **`#780000` (Primary / Dark Red)**: Primary brand identity (`--primary`), call-to-action buttons (`.btn-primary`), active navigation, step counter badges, and focus outlines.
+- **`#c1121f` (Secondary / Accent Red)**: Secondary highlights (`--secondary`), active elements, icons (`.icon-accent`, `.icon-heart`), hover states, and status completed badges.
+- **`#669bbc` (Muted Blue / Supporting)**: Supporting accents (`--palette-muted-blue`), subtle and strong borders (`--border-subtle`, `--border-strong`), status progress badges, and multi-stop progress gradients.
 
 ---
 
@@ -198,7 +199,7 @@ Multi-Page-Recipe-Book/
 │   │   ├── recipe-detail.css    # Recipe detail page layout & sidebar
 │   │   ├── reset.css            # Standard modern CSS reset
 │   │   ├── style.css            # Main stylesheet layer orchestrator
-│   │   └── tokens.css           # 4-color palette tokens, fluid typography, radii, shadows
+│   │   └── tokens.css           # 5-color palette tokens, fluid typography, radii, shadows
 │   └── images/
 │       ├── preview.png          # Project desktop preview screenshot
 │       └── recipes/             # High-resolution recipe photography
@@ -215,6 +216,7 @@ Multi-Page-Recipe-Book/
 │   ├── Khichuri.html
 │   ├── Mutton.html
 │   └── Sabjivat.html
+├── implementation.md            # Theme change strategy & color mapping specification
 ├── index.html                   # Homepage catalog, hero, & cooking progress
 └── README.md                    # Project documentation & engineering specs
 ```
@@ -227,7 +229,7 @@ Multi-Page-Recipe-Book/
 | :--- | :--- |
 | **HTML5** | Semantic markup (`<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, `<table>`, `<progress>`) |
 | **CSS3** | Modern styling: Cascade Layers (`@layer`), CSS Grid, Flexbox, `position: sticky`, `backdrop-filter` |
-| **Color Theme** | Curated 4-color warm culinary palette (#FFEDCE, #FFC193, #FF8383, #FF3737) |
+| **Color Theme** | Curated 5-color palette (#fdf0d5, #003049, #780000, #c1121f, #669bbc) |
 | **Vanilla Architecture** | Zero runtime dependencies, no build pipeline required, pure static delivery |
 
 ---

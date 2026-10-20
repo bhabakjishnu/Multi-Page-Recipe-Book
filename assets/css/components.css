@@ -82,12 +82,12 @@
     .btn-primary {
         background-color: var(--primary);
         color: var(--text-inverse);
-        box-shadow: 0 4px 14px -2px rgba(255, 55, 55, 0.4);
+        box-shadow: 0 4px 14px -2px rgba(120, 0, 0, 0.35);
 
         &:hover {
             background-color: var(--primary-hover);
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px -2px rgba(255, 55, 55, 0.55);
+            box-shadow: 0 6px 18px -2px rgba(120, 0, 0, 0.45);
         }
     }
 
@@ -157,7 +157,7 @@
                 width: 2rem;
                 height: 2rem;
                 border-radius: var(--radius-full);
-                background: rgba(255, 193, 147, 0.35);
+                background: rgba(102, 155, 188, 0.2);
                 color: var(--primary);
                 transition: transform var(--transition-smooth), background-color var(--transition-smooth), color var(--transition-smooth);
                 flex-shrink: 0;
@@ -232,7 +232,7 @@
         }
 
         thead {
-            background: rgba(255, 237, 206, 0.7);
+            background: rgba(253, 240, 213, 0.7);
             border-bottom: 1px solid var(--border-subtle);
 
             th {
@@ -254,7 +254,7 @@
             }
 
             &:hover {
-                background-color: rgba(255, 237, 206, 0.35);
+                background-color: rgba(253, 240, 213, 0.45);
             }
         }
     }
@@ -277,13 +277,13 @@
         }
 
         &::-webkit-progress-value {
-            background: linear-gradient(90deg, var(--palette-peach), var(--palette-coral), var(--palette-crimson));
+            background: linear-gradient(90deg, var(--palette-muted-blue), var(--palette-accent-red), var(--palette-primary-red));
             border-radius: var(--radius-full);
             transition: width var(--transition-smooth);
         }
 
         &::-moz-progress-bar {
-            background: linear-gradient(90deg, var(--palette-peach), var(--palette-coral), var(--palette-crimson));
+            background: linear-gradient(90deg, var(--palette-muted-blue), var(--palette-accent-red), var(--palette-primary-red));
             border-radius: var(--radius-full);
         }
     }
